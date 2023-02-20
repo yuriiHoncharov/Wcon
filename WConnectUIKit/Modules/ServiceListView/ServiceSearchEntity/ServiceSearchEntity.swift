@@ -47,6 +47,8 @@ struct SearchEntity: Identifiable, Hashable {
     let images: [ImageObject]
     var isFavorite: Bool
     var buyPromotions: [TypePromotion]?
+  
+//    var price = String(\(priceFrom) + \(priceTo))
 }
 
 extension SearchEntity {

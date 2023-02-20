@@ -11,11 +11,13 @@ class ServiceTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userOrderLabel: UILabel!
-    @IBOutlet weak var userRatingLabel: UILabel!
+    @IBOutlet weak var userPriceLabel: UILabel!
+    @IBOutlet weak var userCommentLabel: UILabel!
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
 
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
@@ -26,8 +28,8 @@ class ServiceTableViewCell: UITableViewCell {
     func setService(service: SearchEntity) {
         userNameLabel.text = service.firstName
         userOrderLabel.text = service.category
-        userRatingLabel.text = "wqqwqw"
+        userPriceLabel.text = String("\(service.priceFrom) - \(service.priceTo)")
+        userCommentLabel.text = service.comment
     }
-    
 }
- 
+

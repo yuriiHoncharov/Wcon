@@ -16,6 +16,7 @@
 		1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A07DA29A38BBE007EA30C /* ServiceSearchEntity.swift */; };
 		1F3A07DD29A38C10007EA30C /* DateFormaterUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A07DC29A38C10007EA30C /* DateFormaterUtility.swift */; };
 		1F3A07DF29A38C89007EA30C /* ServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A07DE29A38C89007EA30C /* ServiceParser.swift */; };
+		1F6596C429A3D19100BE4941 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6596C329A3D19100BE4941 /* Extension+UITableView.swift */; };
 		1F709991299E635400431F3D /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F709990299E635400431F3D /* SecureStorage.swift */; };
 		1F709995299E679B00431F3D /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F709994299E679B00431F3D /* AuthEntity.swift */; };
 		1F709997299E67E900431F3D /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F709996299E67E900431F3D /* Base.swift */; };
@@ -55,6 +56,7 @@
 		1F3A07DA29A38BBE007EA30C /* ServiceSearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchEntity.swift; sourceTree = "<group>"; };
 		1F3A07DC29A38C10007EA30C /* DateFormaterUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormaterUtility.swift; sourceTree = "<group>"; };
 		1F3A07DE29A38C89007EA30C /* ServiceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceParser.swift; sourceTree = "<group>"; };
+		1F6596C329A3D19100BE4941 /* Extension+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
 		1F709990299E635400431F3D /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
 		1F709994299E679B00431F3D /* AuthEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEntity.swift; sourceTree = "<group>"; };
 		1F709996299E67E900431F3D /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				1F2E5439299E8A4B0084B6C6 /* Extension+UIViewController.swift */,
 				1F2E544A299FC0DC0084B6C6 /* Extension+UICollectionView.swift */,
 				1F2E544C299FC10C0084B6C6 /* Extension+UIView.swift */,
+				1F6596C329A3D19100BE4941 /* Extension+UITableView.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA4924F299E4F5E0018735E /* NetworkMonitor.swift in Sources */,
+				1F6596C429A3D19100BE4941 /* Extension+UITableView.swift in Sources */,
 				1FA4924B299E4E6D0018735E /* JSONParserServiceProtocol.swift in Sources */,
 				1F2E544D299FC10C0084B6C6 /* Extension+UIView.swift in Sources */,
 				1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */,

@@ -40,13 +40,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.buttonAction = { [weak self] in
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ServiceTableView") as! ServiceTableView
-                let navigationController = UINavigationController(rootViewController: vc)
-                self.present(navigationController, animated: true, completion: nil)
-                
-//                let vc = ServiceListView.fromStoryboard
-//                HomeViewController.navigationController?.pushViewController(vc, animated: true)
-                print("navigation to list")
+                let vc = ServiceTableView.fromStoryboard
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         cell.backgroundColor = .gray
