@@ -1,5 +1,5 @@
 //
-//  ServiceListView.swift
+//  ServiceTableView.swift
 //  WConnectUIKit
 //
 //  Created by Yurii Honcharov on 16.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServiceListView: UIViewController {
+class ServiceTableView: UIViewController {
     
     var services: [SearchEntity] = []
     
@@ -17,7 +17,7 @@ class ServiceListView: UIViewController {
     }
 }
 
-extension ServiceListView: UITableViewDataSource, UITableViewDelegate {
+extension ServiceTableView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return services.count
@@ -25,7 +25,7 @@ extension ServiceListView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let service = services[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "serviceCell", for: indexPath) as! ServiceTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceTableViewCell", for: indexPath) as! ServiceTableViewCell
         
         cell.setService(service: service)
         return cell

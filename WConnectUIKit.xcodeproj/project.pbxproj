@@ -31,7 +31,7 @@
 		1FA49222299E3E610018735E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA49221299E3E610018735E /* Assets.xcassets */; };
 		1FA49225299E3E610018735E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA49223299E3E610018735E /* LaunchScreen.storyboard */; };
 		1FA49238299E430D0018735E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49237299E430D0018735E /* HomeViewController.swift */; };
-		1FA4923C299E47770018735E /* ServiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4923B299E47770018735E /* ServiceListView.swift */; };
+		1FA4923C299E47770018735E /* ServiceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4923B299E47770018735E /* ServiceTableView.swift */; };
 		1FA49245299E4A320018735E /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49244299E4A320018735E /* APIEndpoints.swift */; };
 		1FA49247299E4D650018735E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49246299E4D650018735E /* APIService.swift */; };
 		1FA49249299E4DF10018735E /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49248299E4DF10018735E /* HTTPClientError.swift */; };
@@ -72,7 +72,7 @@
 		1FA49224299E3E610018735E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA49226299E3E610018735E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA49237299E430D0018735E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1FA4923B299E47770018735E /* ServiceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListView.swift; sourceTree = "<group>"; };
+		1FA4923B299E47770018735E /* ServiceTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableView.swift; sourceTree = "<group>"; };
 		1FA49244299E4A320018735E /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		1FA49246299E4D650018735E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1FA49248299E4DF10018735E /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 		1FA820A029A3780E00504D26 /* ServiceTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1FA4923B299E47770018735E /* ServiceListView.swift */,
+				1FA4923B299E47770018735E /* ServiceTableView.swift */,
 				1F3A07DE29A38C89007EA30C /* ServiceParser.swift */,
 				1FA8209B29A36D6B00504D26 /* ServiceTableView.storyboard */,
 			);
@@ -406,7 +406,7 @@
 				1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */,
 				1F7099A3299E6D6700431F3D /* GetServiceApiEntity.swift in Sources */,
 				1FA820A429A3791800504D26 /* ServiceSearchMapper.swift in Sources */,
-				1FA4923C299E47770018735E /* ServiceListView.swift in Sources */,
+				1FA4923C299E47770018735E /* ServiceTableView.swift in Sources */,
 				1F7099A1299E6CBF00431F3D /* CategoriesApiEntity.swift in Sources */,
 				1F7099A5299E70E100431F3D /* BlogRequest.swift in Sources */,
 				1FA49249299E4DF10018735E /* HTTPClientError.swift in Sources */,
