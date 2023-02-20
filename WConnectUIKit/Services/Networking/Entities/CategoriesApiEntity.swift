@@ -25,7 +25,7 @@ enum CategoriesApiEntity {
         let totalCount: Int?
     }
     
-    struct Category: Decodable {
+    struct Category: Codable {
         let id: String?
         let remark: String?
         let titleTranslations: LocalizedApiTitle?

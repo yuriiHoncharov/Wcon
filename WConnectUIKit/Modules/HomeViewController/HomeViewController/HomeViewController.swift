@@ -7,11 +7,13 @@
 
 import UIKit
 
+//protocol HomeViewProtocol: AnyObject {
+//    init(view: UIViewController)
+//}
 
 class HomeViewController: UIViewController {
        
     @IBOutlet weak var collectionView: UICollectionView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +26,6 @@ class HomeViewController: UIViewController {
         
         collectionView.register(HomeCollectionViewCell.self)
     }
- 
-//    private func searchButtonView() {
-//        orderButton.setTitle("Смотреть все", for: .normal)
-//        view.addSubview(orderButton)
-//        orderButton.backgroundColor = .green
-//        orderButton.setTitleColor(.white, for: .normal)
-//
-//    }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -43,10 +36,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(HomeCollectionViewCell.self, indexPath)
-        cell.display(title: "title title title title", subtitle: "subtitle", buttonTitle: "buttonTitle")
+        cell.display(title: "title title title title", subtitle: "subtitle", buttonTitle: "button")
         cell.buttonAction = { [weak self] in
-            guard let self = self else { return }
-            print("navigation to list")
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                let vc = ServiceListView.fromStoryboard
+//                HomeViewController.navigationController?.pushViewController(vc, animated: true)
+                print("navigation to list")
+            }
         }
         cell.backgroundColor = .gray
         return cell

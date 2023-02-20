@@ -15,8 +15,8 @@ enum BlogsApiEntity {
         let limit: Int = 20
     }
     
-    struct Response: Codable {
-//        var error: String?
+    struct Response: BaseResponseProtocol {
+        var error: String?
         let items: [Item]?
         let totalCount: Int?
         let countByText: Int?

@@ -15,7 +15,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
 //    override func prepareForReuse() {
@@ -30,6 +29,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
         titleLabel.text = title
         subtitleLabel.text = subtitle
         navigationButton.setTitle(buttonTitle, for: .normal)
-        navigationButton.backgroundColor = .green
+//        navigationButton.backgroundColor = .green
     }
 }

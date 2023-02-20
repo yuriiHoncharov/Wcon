@@ -1,5 +1,5 @@
 //
-//  GetOrderApiEntity.swift
+//  GetServiceApiEntity.swift
 //  WConnect
 //
 //  Created by Oleksii Kalinchuk on 18.04.2022.
@@ -27,7 +27,7 @@ enum ServiceSearchApiEntity {
         let totalCount: Int?
     }
     
-    struct Item: Decodable {
+    struct Item: Codable {
         let id: String
         let district: String
         let comment: String
@@ -60,7 +60,7 @@ enum ServiceSearchApiEntity {
             case specialist
         }
                 
-        struct Category: Decodable {
+        struct Category: Codable {
             let id: String
             let remark: String?
             let title: String?
@@ -76,7 +76,7 @@ enum ServiceSearchApiEntity {
             }
         }
         
-        struct Subcategory: Decodable {
+        struct Subcategory: Codable {
             let id: String
             let title: String?
             let name: String?
@@ -94,7 +94,7 @@ enum ServiceSearchApiEntity {
             }
         }
         
-        struct Clarification: Decodable {
+        struct Clarification: Codable {
             let id: String
             let subcategory: String
             let remark: String
@@ -112,17 +112,17 @@ enum ServiceSearchApiEntity {
             }
         }
         
-        struct Schedule: Decodable {
+        struct Schedule: Codable {
             let day: DayOfWeek
             let workingHours: [WorkingHour]
             
-            struct WorkingHour: Decodable {
+            struct WorkingHour: Codable {
                 let timeFrom: String
                 let timeTo: String
             }
         }
         
-        struct Specialist: Decodable {
+        struct Specialist: Codable {
             let id: String
             let isPopular: Bool?
             let isFavorite: Bool?
@@ -162,11 +162,11 @@ enum ServiceSearchApiEntity {
             }
         }
         
-        struct Promotion: Decodable {
+        struct Promotion: Codable {
             let type: TypePromotion
         }
         
-        struct Phone: Decodable {
+        struct Phone: Codable {
             let number: String?
             let flag: String?
             let isoCode: String?
@@ -176,7 +176,7 @@ enum ServiceSearchApiEntity {
 }
 
 
-struct ImageApiEntity: Decodable {
+struct ImageApiEntity: Codable {
     let id: String
     let url: String
     let contentType: String
@@ -188,7 +188,7 @@ struct ImageApiEntity: Decodable {
     }
 }
 
-enum DayOfWeek: String, CaseIterable, Decodable {
+enum DayOfWeek: String, CaseIterable, Codable {
     case monday = "MONDAY"
     case tuesday = "TUESDAY"
     case wednesday = "WEDNESDAY"
@@ -210,7 +210,7 @@ enum DayOfWeek: String, CaseIterable, Decodable {
     }
 }
 
-enum TypePromotion: String, CaseIterable, Decodable {
+enum TypePromotion: String, CaseIterable, Codable {
     case topCategory = "TOP_CATEGORY"
     case top = "TOP"
     case beautyName = "BEAUTY_NAME"
