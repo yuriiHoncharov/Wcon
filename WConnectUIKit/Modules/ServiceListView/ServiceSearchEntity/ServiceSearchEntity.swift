@@ -68,7 +68,7 @@ extension SearchEntity {
                                    birthday: "",
                                    ageFrom: 1,
                                    ageTo: 2,
-                                   comment: "",
+                                   comment: "comment",
                                    priceFrom: 1,
                                    priceTo: 2,
                                    lastMessage: nil,
