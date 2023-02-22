@@ -13,31 +13,24 @@ class STableViewCell: UITableViewCell {
     @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var servicePriceLabel: UILabel!
     @IBOutlet weak var serviceCommentLabel: UILabel!
-    
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func layoutSubviews() {
           super.layoutSubviews()
-          //set the values for top,left,bottom,right margins
-          let margins = UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8)
+          let margins = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
           contentView.frame = contentView.frame.inset(by: margins)
           contentView.layer.cornerRadius = 8
     }
     
 //    override func layoutSubviews() {
-//        super.layoutSubviews()
-//
-//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
 //    }
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
-//        // Initialization code
 //    }
 
 //    override func setSelected(_ selected: Bool, animated: Bool) {
 //        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
 //    }
 //
     
@@ -50,6 +43,8 @@ class STableViewCell: UITableViewCell {
     }
     
     func setService(service: SearchEntity) {
+        backgroundImage.cornerRadius = 10
+        backgroundImage.backgroundColor = UIColor(named: "BaseWhite")
         userImage.backgroundColor = .red
         userNameLabel.text = String("\(service.firstName)  \(service.lastName)")
         serviceLabel.text = service.category

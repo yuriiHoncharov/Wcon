@@ -19,12 +19,7 @@ class ServiceSearchViewController: UIViewController {
         
         tableView.backgroundColor =  UIColor(named: "BackgroundGray")
         services = createService()
-        
-//        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-//        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-//        tableView.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        
-        
+        tableView.separatorStyle = .none
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,10 +49,6 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
         return UITableView.automaticDimension
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//           return self.services.count
-//       }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return services.count
     }
@@ -75,10 +66,7 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
         
         cell.setService(service: service)
                 
-        cell.backgroundColor = UIColor(named: "BaseWhite")
-//        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.cornerRadius = 10
-//        cell.clipsToBounds = true
+        cell.backgroundColor = UIColor(named: "BackgroundGray")
         return cell
     }
 }
