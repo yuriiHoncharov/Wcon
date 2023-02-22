@@ -39,6 +39,9 @@
                         <rect key="frame" x="16" y="155.66666666666666" width="371" height="52.333333333333343"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <connections>
+                            <action selector="contactButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jtR-GQ-EAf"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jt-Fm-EHc">
                         <rect key="frame" x="363" y="64.333333333333329" width="24" height="24"/>
@@ -48,6 +51,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="Fauvorite"/>
+                        <connections>
+                            <action selector="favouriteButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RKl-4Y-x4G"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un8-BG-ixL">
                         <rect key="frame" x="60" y="76.666666666666671" width="33" height="15.666666666666671"/>

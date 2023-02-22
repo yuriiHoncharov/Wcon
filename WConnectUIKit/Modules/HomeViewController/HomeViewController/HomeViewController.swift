@@ -44,7 +44,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
-        cell.backgroundColor = .gray
+        //         tableView.backgroundColor =  UIColor(named: "backgroundCray")
+
+        cell.backgroundColor =  UIColor(named: "BackgroundGray")
         return cell
     }
     

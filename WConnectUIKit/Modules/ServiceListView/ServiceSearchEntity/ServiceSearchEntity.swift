@@ -48,7 +48,6 @@ struct SearchEntity: Identifiable, Hashable {
     var isFavorite: Bool
     var buyPromotions: [TypePromotion]?
   
-//    var price = String(\(priceFrom) + \(priceTo))
 }
 
 extension SearchEntity {
