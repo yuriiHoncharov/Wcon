@@ -8,17 +8,13 @@
 
 import Foundation
 
-class BlogRequest: ApiService {
-    func getBlogs(params: BlogsApiEntity.Request, completion: @escaping (Result<BlogsApiEntity.Response, Error>) -> Void) {
-        let params: [String: Any] = params.convertToParameters
-        let url =  APIEndpoints.Blog.search()
+class BlogRequest: APIService {
+    func getBlogs(params: BlogsApiEntity.Request, completion: @escaping RequestHandler<BlogsApiEntity.Response>) {
+        let url = APIEndpoints.Blog.search()
         
-        httpClient.get(url: url, token: nil, params: params) { [weak self] result in
-            
+        httpClient.request(method: .get, url: url, withToken: false, images: nil, params: params) { [weak self] response in
             guard let self = self else { return }
-            self.handleResponseResult(result: result,
-                                      responseModel: BlogsApiEntity.Response.self,
-                                      completion: completion)
+            self.handleResponseResult(result: response, responseModel: BlogsApiEntity.Response.self, completion: completion)
         }
     }
 }

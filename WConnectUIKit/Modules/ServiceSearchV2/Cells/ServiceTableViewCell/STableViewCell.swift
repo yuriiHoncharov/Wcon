@@ -42,13 +42,13 @@ class STableViewCell: UITableViewCell {
         
     }
     
-    func setService(service: SearchEntity) {
+    func setService(service: ServiceSearchV2Entity.View.SearchItemEntity) {
         backgroundImage.cornerRadius = 10
         backgroundImage.backgroundColor = UIColor(named: "BaseWhite")
         userImage.backgroundColor = .red
-        userNameLabel.text = String("\(service.firstName)  \(service.lastName)")
-        serviceLabel.text = service.category
-        servicePriceLabel.text = String("\(service.priceFrom) - \(service.priceTo)")
-        serviceCommentLabel.text = service.comment
+        userNameLabel.text = String("\(service.name)  \(service.surname)")
+//        serviceLabel.text = service.category
+//        servicePriceLabel.text = String("\(service.priceFrom) - \(service.priceTo)")
+//        serviceCommentLabel.text = service.comment
     }
 }

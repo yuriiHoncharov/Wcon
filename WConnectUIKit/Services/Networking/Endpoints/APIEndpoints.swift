@@ -14,10 +14,22 @@ enum ApiEnvironment: String, Equatable, CaseIterable, Codable {
 }
 
 struct APIEndpoints {
+    
+//    static func environment() -> ApiEnvironment {
+//        #if DEBUG
+//            if let envStr = SecureStorage().load(with: SecureStorageKeys.kEnvironment, type: String.self),
+//               let environment = ApiEnvironment.init(rawValue: envStr) {
+//                return environment
+//            }
+//            return .development
+//        #else
+//            return .production
+//        #endif
+//    }
 
     private static let environment = ApiEnvironment.development
     private static let apiVersion = "/v1"
-    private static func baseURL() -> String { return environment.rawValue }
+    private static func baseURL() -> String { return environment.rawValue + "/api" + apiVersion }
     
     struct Auth {
         static func login() -> String { return "\(baseURL())/auth/login" }

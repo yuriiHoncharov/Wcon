@@ -15,13 +15,18 @@
 		1F2E5451299FC3560084B6C6 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E544F299FC3560084B6C6 /* HomeCollectionViewCell.xib */; };
 		1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A07DA29A38BBE007EA30C /* ServiceSearchEntity.swift */; };
 		1F3A07DD29A38C10007EA30C /* DateFormaterUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A07DC29A38C10007EA30C /* DateFormaterUtility.swift */; };
-		1F3A07DF29A38C89007EA30C /* ServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3A07DE29A38C89007EA30C /* ServiceParser.swift */; };
+		1F591CD529A674580044B816 /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CD129A674580044B816 /* SecureStorage.swift */; };
+		1F591CD629A674580044B816 /* AccessDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CD329A674580044B816 /* AccessDataEntity.swift */; };
+		1F591CD729A674580044B816 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CD429A674580044B816 /* Keychain.swift */; };
+		1F591CDA29A674980044B816 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CD929A674980044B816 /* NetworkMonitor.swift */; };
+		1F591CDD29A675370044B816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CDC29A675370044B816 /* Constants.swift */; };
+		1F591CDF29A74A690044B816 /* RefreshTokenApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CDE29A74A690044B816 /* RefreshTokenApiEntity.swift */; };
+		1F591CE429A74B3A0044B816 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CE329A74B3A0044B816 /* String+Extension.swift */; };
+		1F591CE729A74FCF0044B816 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F591CE629A74FCF0044B816 /* RequestHandler.swift */; };
 		1F62546829A61B320039E0F2 /* Collors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F62546729A61B320039E0F2 /* Collors.xcassets */; };
 		1F6596C429A3D19100BE4941 /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6596C329A3D19100BE4941 /* Extension+UITableView.swift */; };
 		1F6596C729A6046000BE4941 /* STableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6596C529A6046000BE4941 /* STableViewCell.swift */; };
 		1F6596C829A6046000BE4941 /* STableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F6596C629A6046000BE4941 /* STableViewCell.xib */; };
-		1F709991299E635400431F3D /* SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F709990299E635400431F3D /* SecureStorage.swift */; };
-		1F709995299E679B00431F3D /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F709994299E679B00431F3D /* AuthEntity.swift */; };
 		1F709997299E67E900431F3D /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F709996299E67E900431F3D /* Base.swift */; };
 		1F709999299E6BA500431F3D /* BlogsApiEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F709998299E6BA500431F3D /* BlogsApiEntity.swift */; };
 		1F70999C299E6BE300431F3D /* LocalizedApiTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F70999B299E6BE300431F3D /* LocalizedApiTitle.swift */; };
@@ -35,16 +40,21 @@
 		1FA49222299E3E610018735E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA49221299E3E610018735E /* Assets.xcassets */; };
 		1FA49225299E3E610018735E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA49223299E3E610018735E /* LaunchScreen.storyboard */; };
 		1FA49238299E430D0018735E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49237299E430D0018735E /* HomeViewController.swift */; };
-		1FA4923C299E47770018735E /* ServiceSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4923B299E47770018735E /* ServiceSearchViewController.swift */; };
 		1FA49245299E4A320018735E /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49244299E4A320018735E /* APIEndpoints.swift */; };
 		1FA49247299E4D650018735E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49246299E4D650018735E /* APIService.swift */; };
 		1FA49249299E4DF10018735E /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA49248299E4DF10018735E /* HTTPClientError.swift */; };
 		1FA4924B299E4E6D0018735E /* JSONParserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4924A299E4E6D0018735E /* JSONParserServiceProtocol.swift */; };
 		1FA4924D299E4E980018735E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4924C299E4E980018735E /* HTTPClient.swift */; };
-		1FA4924F299E4F5E0018735E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4924E299E4F5E0018735E /* NetworkMonitor.swift */; };
-		1FA8209C29A36D6B00504D26 /* ServiceSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA8209B29A36D6B00504D26 /* ServiceSearchViewController.storyboard */; };
 		1FA8209E29A3732100504D26 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA8209D29A3732100504D26 /* ServiceRequest.swift */; };
 		1FA820A429A3791800504D26 /* ServiceSearchMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA820A329A3791800504D26 /* ServiceSearchMapper.swift */; };
+		1FCCB04929A76815003295CE /* ServiceSearchV2Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04129A76815003295CE /* ServiceSearchV2Presenter.swift */; };
+		1FCCB04A29A76815003295CE /* ServiceSearchV2Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04229A76815003295CE /* ServiceSearchV2Worker.swift */; };
+		1FCCB04B29A76815003295CE /* ServiceSearchV2Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04329A76815003295CE /* ServiceSearchV2Router.swift */; };
+		1FCCB04C29A76815003295CE /* ServiceSearchV2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCB04429A76815003295CE /* ServiceSearchV2ViewController.storyboard */; };
+		1FCCB04D29A76815003295CE /* ServiceSearchV2Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04529A76815003295CE /* ServiceSearchV2Models.swift */; };
+		1FCCB04E29A76815003295CE /* ServiceSearchV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04629A76815003295CE /* ServiceSearchV2ViewController.swift */; };
+		1FCCB04F29A76815003295CE /* ServiceSearchV2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04729A76815003295CE /* ServiceSearchV2Builder.swift */; };
+		1FCCB05029A76815003295CE /* ServiceSearchV2Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04829A76815003295CE /* ServiceSearchV2Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,13 +66,18 @@
 		1F2E544F299FC3560084B6C6 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		1F3A07DA29A38BBE007EA30C /* ServiceSearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchEntity.swift; sourceTree = "<group>"; };
 		1F3A07DC29A38C10007EA30C /* DateFormaterUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormaterUtility.swift; sourceTree = "<group>"; };
-		1F3A07DE29A38C89007EA30C /* ServiceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceParser.swift; sourceTree = "<group>"; };
+		1F591CD129A674580044B816 /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
+		1F591CD329A674580044B816 /* AccessDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessDataEntity.swift; sourceTree = "<group>"; };
+		1F591CD429A674580044B816 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		1F591CD929A674980044B816 /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		1F591CDC29A675370044B816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F591CDE29A74A690044B816 /* RefreshTokenApiEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenApiEntity.swift; sourceTree = "<group>"; };
+		1F591CE329A74B3A0044B816 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		1F591CE629A74FCF0044B816 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		1F62546729A61B320039E0F2 /* Collors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Collors.xcassets; sourceTree = "<group>"; };
 		1F6596C329A3D19100BE4941 /* Extension+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UITableView.swift"; sourceTree = "<group>"; };
 		1F6596C529A6046000BE4941 /* STableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STableViewCell.swift; sourceTree = "<group>"; };
 		1F6596C629A6046000BE4941 /* STableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = STableViewCell.xib; sourceTree = "<group>"; };
-		1F709990299E635400431F3D /* SecureStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStorage.swift; sourceTree = "<group>"; };
-		1F709994299E679B00431F3D /* AuthEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEntity.swift; sourceTree = "<group>"; };
 		1F709996299E67E900431F3D /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		1F709998299E6BA500431F3D /* BlogsApiEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogsApiEntity.swift; sourceTree = "<group>"; };
 		1F70999B299E6BE300431F3D /* LocalizedApiTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedApiTitle.swift; sourceTree = "<group>"; };
@@ -78,16 +93,21 @@
 		1FA49224299E3E610018735E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA49226299E3E610018735E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA49237299E430D0018735E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1FA4923B299E47770018735E /* ServiceSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchViewController.swift; sourceTree = "<group>"; };
 		1FA49244299E4A320018735E /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		1FA49246299E4D650018735E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1FA49248299E4DF10018735E /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		1FA4924A299E4E6D0018735E /* JSONParserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserServiceProtocol.swift; sourceTree = "<group>"; };
 		1FA4924C299E4E980018735E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		1FA4924E299E4F5E0018735E /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		1FA8209B29A36D6B00504D26 /* ServiceSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceSearchViewController.storyboard; sourceTree = "<group>"; };
 		1FA8209D29A3732100504D26 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		1FA820A329A3791800504D26 /* ServiceSearchMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchMapper.swift; sourceTree = "<group>"; };
+		1FCCB04129A76815003295CE /* ServiceSearchV2Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Presenter.swift; sourceTree = "<group>"; };
+		1FCCB04229A76815003295CE /* ServiceSearchV2Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Worker.swift; sourceTree = "<group>"; };
+		1FCCB04329A76815003295CE /* ServiceSearchV2Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Router.swift; sourceTree = "<group>"; };
+		1FCCB04429A76815003295CE /* ServiceSearchV2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceSearchV2ViewController.storyboard; sourceTree = "<group>"; };
+		1FCCB04529A76815003295CE /* ServiceSearchV2Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Models.swift; sourceTree = "<group>"; };
+		1FCCB04629A76815003295CE /* ServiceSearchV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2ViewController.swift; sourceTree = "<group>"; };
+		1FCCB04729A76815003295CE /* ServiceSearchV2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Builder.swift; sourceTree = "<group>"; };
+		1FCCB04829A76815003295CE /* ServiceSearchV2Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Interactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +130,48 @@
 			path = HomeCollectionRows;
 			sourceTree = "<group>";
 		};
+		1F591CD029A674580044B816 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				1F591CD129A674580044B816 /* SecureStorage.swift */,
+				1F591CD229A674580044B816 /* Models */,
+				1F591CD429A674580044B816 /* Keychain.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		1F591CD229A674580044B816 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F591CD329A674580044B816 /* AccessDataEntity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F591CD829A674880044B816 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				1F591CD929A674980044B816 /* NetworkMonitor.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		1F591CDB29A6751C0044B816 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1F591CDC29A675370044B816 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1F591CE529A74FCF0044B816 /* Typealiases */ = {
+			isa = PBXGroup;
+			children = (
+				1F591CE629A74FCF0044B816 /* RequestHandler.swift */,
+			);
+			path = Typealiases;
+			sourceTree = "<group>";
+		};
 		1F70999A299E6BE300431F3D /* GeneralEntities */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +192,7 @@
 		1F7099A7299E793700431F3D /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				1F591CE329A74B3A0044B816 /* String+Extension.swift */,
 				1F7099A8299E795B00431F3D /* Extension+UINavigationController.swift */,
 				1F2E5439299E8A4B0084B6C6 /* Extension+UIViewController.swift */,
 				1F2E544A299FC0DC0084B6C6 /* Extension+UICollectionView.swift */,
@@ -163,7 +226,6 @@
 				1FA4922E299E3EA20018735E /* Modules */,
 				1FA4922C299E3E890018735E /* Services */,
 				1FA49230299E3ED90018735E /* Support */,
-				1FA4922F299E3EAE0018735E /* Views */,
 			);
 			path = WConnectUIKit;
 			sourceTree = "<group>";
@@ -187,25 +249,16 @@
 		1FA4922E299E3EA20018735E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1FA4923A299E47490018735E /* ServiceListView */,
+				1FCCB04029A767D9003295CE /* ServiceSearchV2 */,
 				1FA49239299E47330018735E /* HomeViewController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		1FA4922F299E3EAE0018735E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		1FA49230299E3ED90018735E /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				1FA4924E299E4F5E0018735E /* NetworkMonitor.swift */,
 				1F3A07DC29A38C10007EA30C /* DateFormaterUtility.swift */,
-				1F709990299E635400431F3D /* SecureStorage.swift */,
 				1FA49226299E3E610018735E /* Info.plist */,
 				1FA49223299E3E610018735E /* LaunchScreen.storyboard */,
 				1FA4921E299E3E600018735E /* Main.storyboard */,
@@ -216,6 +269,9 @@
 		1FA49231299E3FD90018735E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1F591CDB29A6751C0044B816 /* Constants */,
+				1F591CD829A674880044B816 /* Validation */,
+				1F591CD029A674580044B816 /* Keychain */,
 				1F7099A7299E793700431F3D /* Extention */,
 				1FA49221299E3E610018735E /* Assets.xcassets */,
 				1F62546729A61B320039E0F2 /* Collors.xcassets */,
@@ -232,16 +288,6 @@
 			path = HomeViewController;
 			sourceTree = "<group>";
 		};
-		1FA4923A299E47490018735E /* ServiceListView */ = {
-			isa = PBXGroup;
-			children = (
-				1FA820A229A3790B00504D26 /* ServiceSearchEntity */,
-				1FA820A029A3780E00504D26 /* ServiceTableViewController */,
-				1FA8209F29A377D200504D26 /* ServiceTableViewCell */,
-			);
-			path = ServiceListView;
-			sourceTree = "<group>";
-		};
 		1FA4923F299E497B0018735E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +295,7 @@
 				1FA49241299E49AC0018735E /* Endpoints */,
 				1FA49242299E49C90018735E /* Entities */,
 				1FA49243299E49DD0018735E /* Requests */,
+				1F591CE529A74FCF0044B816 /* Typealiases */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -276,11 +323,11 @@
 			isa = PBXGroup;
 			children = (
 				1F70999A299E6BE300431F3D /* GeneralEntities */,
-				1F709994299E679B00431F3D /* AuthEntity.swift */,
 				1F709996299E67E900431F3D /* Base.swift */,
 				1F709998299E6BA500431F3D /* BlogsApiEntity.swift */,
-				1F7099A2299E6D6700431F3D /* GetServiceApiEntity.swift */,
 				1F7099A0299E6CBF00431F3D /* CategoriesApiEntity.swift */,
+				1F7099A2299E6D6700431F3D /* GetServiceApiEntity.swift */,
+				1F591CDE29A74A690044B816 /* RefreshTokenApiEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -303,16 +350,6 @@
 			path = ServiceTableViewCell;
 			sourceTree = "<group>";
 		};
-		1FA820A029A3780E00504D26 /* ServiceTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1FA4923B299E47770018735E /* ServiceSearchViewController.swift */,
-				1F3A07DE29A38C89007EA30C /* ServiceParser.swift */,
-				1FA8209B29A36D6B00504D26 /* ServiceSearchViewController.storyboard */,
-			);
-			path = ServiceTableViewController;
-			sourceTree = "<group>";
-		};
 		1FA820A129A3786400504D26 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,13 +359,38 @@
 			path = HomeViewController;
 			sourceTree = "<group>";
 		};
-		1FA820A229A3790B00504D26 /* ServiceSearchEntity */ = {
+		1FCCB04029A767D9003295CE /* ServiceSearchV2 */ = {
+			isa = PBXGroup;
+			children = (
+				1FCCB05229A77601003295CE /* Mapper */,
+				1FCCB05129A775DF003295CE /* Cells */,
+				1FCCB04129A76815003295CE /* ServiceSearchV2Presenter.swift */,
+				1FCCB04229A76815003295CE /* ServiceSearchV2Worker.swift */,
+				1FCCB04329A76815003295CE /* ServiceSearchV2Router.swift */,
+				1FCCB04429A76815003295CE /* ServiceSearchV2ViewController.storyboard */,
+				1FCCB04529A76815003295CE /* ServiceSearchV2Models.swift */,
+				1FCCB04629A76815003295CE /* ServiceSearchV2ViewController.swift */,
+				1FCCB04729A76815003295CE /* ServiceSearchV2Builder.swift */,
+				1FCCB04829A76815003295CE /* ServiceSearchV2Interactor.swift */,
+			);
+			path = ServiceSearchV2;
+			sourceTree = "<group>";
+		};
+		1FCCB05129A775DF003295CE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1FA8209F29A377D200504D26 /* ServiceTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1FCCB05229A77601003295CE /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
 				1F3A07DA29A38BBE007EA30C /* ServiceSearchEntity.swift */,
 				1FA820A329A3791800504D26 /* ServiceSearchMapper.swift */,
 			);
-			path = ServiceSearchEntity;
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,11 +451,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FCCB04C29A76815003295CE /* ServiceSearchV2ViewController.storyboard in Resources */,
 				1F6596C829A6046000BE4941 /* STableViewCell.xib in Resources */,
 				1FA49225299E3E610018735E /* LaunchScreen.storyboard in Resources */,
 				1F62546829A61B320039E0F2 /* Collors.xcassets in Resources */,
 				1F2E5436299E88410084B6C6 /* HomeViewController.storyboard in Resources */,
-				1FA8209C29A36D6B00504D26 /* ServiceSearchViewController.storyboard in Resources */,
 				1FA49222299E3E610018735E /* Assets.xcassets in Resources */,
 				1F2E5451299FC3560084B6C6 /* HomeCollectionViewCell.xib in Resources */,
 				1FA49220299E3E600018735E /* Main.storyboard in Resources */,
@@ -407,33 +469,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA4924F299E4F5E0018735E /* NetworkMonitor.swift in Sources */,
+				1FCCB04929A76815003295CE /* ServiceSearchV2Presenter.swift in Sources */,
 				1F6596C429A3D19100BE4941 /* Extension+UITableView.swift in Sources */,
 				1FA4924B299E4E6D0018735E /* JSONParserServiceProtocol.swift in Sources */,
 				1F2E544D299FC10C0084B6C6 /* Extension+UIView.swift in Sources */,
+				1FCCB04E29A76815003295CE /* ServiceSearchV2ViewController.swift in Sources */,
 				1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */,
+				1F591CD729A674580044B816 /* Keychain.swift in Sources */,
 				1F7099A3299E6D6700431F3D /* GetServiceApiEntity.swift in Sources */,
+				1FCCB05029A76815003295CE /* ServiceSearchV2Interactor.swift in Sources */,
 				1FA820A429A3791800504D26 /* ServiceSearchMapper.swift in Sources */,
-				1FA4923C299E47770018735E /* ServiceSearchViewController.swift in Sources */,
 				1F7099A1299E6CBF00431F3D /* CategoriesApiEntity.swift in Sources */,
 				1F7099A5299E70E100431F3D /* BlogRequest.swift in Sources */,
 				1FA49249299E4DF10018735E /* HTTPClientError.swift in Sources */,
 				1FA49247299E4D650018735E /* APIService.swift in Sources */,
+				1F591CD529A674580044B816 /* SecureStorage.swift in Sources */,
 				1F2E543A299E8A4C0084B6C6 /* Extension+UIViewController.swift in Sources */,
 				1F70999C299E6BE300431F3D /* LocalizedApiTitle.swift in Sources */,
 				1FA8209E29A3732100504D26 /* ServiceRequest.swift in Sources */,
-				1F709991299E635400431F3D /* SecureStorage.swift in Sources */,
+				1FCCB04A29A76815003295CE /* ServiceSearchV2Worker.swift in Sources */,
 				1F6596C729A6046000BE4941 /* STableViewCell.swift in Sources */,
-				1F3A07DF29A38C89007EA30C /* ServiceParser.swift in Sources */,
 				1F7099A9299E795B00431F3D /* Extension+UINavigationController.swift in Sources */,
+				1F591CDF29A74A690044B816 /* RefreshTokenApiEntity.swift in Sources */,
+				1F591CE429A74B3A0044B816 /* String+Extension.swift in Sources */,
+				1F591CE729A74FCF0044B816 /* RequestHandler.swift in Sources */,
 				1FA4924D299E4E980018735E /* HTTPClient.swift in Sources */,
 				1FA49219299E3E600018735E /* AppDelegate.swift in Sources */,
+				1FCCB04F29A76815003295CE /* ServiceSearchV2Builder.swift in Sources */,
 				1F2E544B299FC0DC0084B6C6 /* Extension+UICollectionView.swift in Sources */,
 				1FA49245299E4A320018735E /* APIEndpoints.swift in Sources */,
+				1FCCB04D29A76815003295CE /* ServiceSearchV2Models.swift in Sources */,
+				1F591CDD29A675370044B816 /* Constants.swift in Sources */,
+				1F591CDA29A674980044B816 /* NetworkMonitor.swift in Sources */,
 				1FA49238299E430D0018735E /* HomeViewController.swift in Sources */,
 				1F709997299E67E900431F3D /* Base.swift in Sources */,
-				1F709995299E679B00431F3D /* AuthEntity.swift in Sources */,
+				1F591CD629A674580044B816 /* AccessDataEntity.swift in Sources */,
 				1F70999F299E6C1E00431F3D /* LanguageManager.swift in Sources */,
+				1FCCB04B29A76815003295CE /* ServiceSearchV2Router.swift in Sources */,
 				1F709999299E6BA500431F3D /* BlogsApiEntity.swift in Sources */,
 				1F3A07DD29A38C10007EA30C /* DateFormaterUtility.swift in Sources */,
 				1F2E5450299FC3560084B6C6 /* HomeCollectionViewCell.swift in Sources */,

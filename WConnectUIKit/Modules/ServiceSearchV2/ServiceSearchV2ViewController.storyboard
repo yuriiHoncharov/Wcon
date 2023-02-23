@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,36 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Service Search View Controller-->
+        <!--Service SearchV2 View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="ServiceSearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ServiceSearchViewController" customModule="WConnectUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceSearchV2ViewController" id="Y6W-OH-hqX" customClass="ServiceSearchV2ViewController" customModule="WConnectUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qzc-Le-XEB">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="urJ-P1-2Qa">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qzc-Le-XEB" secondAttribute="trailing" id="3do-KT-Ck9"/>
-                            <constraint firstItem="Qzc-Le-XEB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="d6Q-i3-nMa"/>
-                            <constraint firstItem="Qzc-Le-XEB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mLd-e7-ep0"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Qzc-Le-XEB" secondAttribute="bottom" id="tuL-xR-6Gu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="urJ-P1-2Qa" secondAttribute="bottom" id="0wV-ox-tTf"/>
+                            <constraint firstItem="urJ-P1-2Qa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AcL-JF-S7c"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="urJ-P1-2Qa" secondAttribute="trailing" id="DGR-DO-SHJ"/>
+                            <constraint firstItem="urJ-P1-2Qa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ind-ah-2dc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="Qzc-Le-XEB" id="rKP-QM-5U5"/>
+                        <outlet property="tableView" destination="urJ-P1-2Qa" id="pmT-YH-gDU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-2"/>
+            <point key="canvasLocation" x="-43" y="40"/>
         </scene>
     </scenes>
     <resources>
