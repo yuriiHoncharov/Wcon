@@ -41,7 +41,7 @@ class ServiceSearchViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "STableViewCell", bundle: nil), forCellReuseIdentifier: "STableViewCell")
+        tableView.register(STableViewCell.self)
     }
 }
 
@@ -53,8 +53,7 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let service = services[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "STableViewCell", for: indexPath) as? STableViewCell
-        else { return UITableViewCell() }
+        let cell = tableView.dequeue(STableViewCell.self, indexPath)
         
         cell.setService(service: service)
         cell.backgroundColor = UIColor(named: "BackgroundGray")
@@ -71,7 +70,6 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
         return UITableView.automaticDimension
     }
 }
-
 
 extension ServiceSearchViewController: ServiceSearchViewControllerProtocol {
     func configure(_ entities: [ServiceSearchEntity.View.SearchItemEntity]) {

@@ -7,28 +7,28 @@
 
 import UIKit
 
-class HomeCollectionViewCell: UICollectionViewCell {
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet weak var navigationButton: UIButton!
-    @IBOutlet weak var subtitleLabel: UILabel!
-        var buttonAction: (() -> Void)?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-//    override func prepareForReuse() {
-//        titleText
+//class HomeCollectionViewCell: UICollectionViewCell {
+//    @IBOutlet private weak var titleLabel: UILabel!
+//    @IBOutlet weak var navigationButton: UIButton!
+//    @IBOutlet weak var subtitleLabel: UILabel!
+//        var buttonAction: (() -> Void)?
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
 //    }
-    
-    @IBAction func setupButton(_ sender: Any) {
-        buttonAction?()
-    }
-        
-    func display(title: String, subtitle: String, buttonTitle: String) {
-        titleLabel.text = title
-        subtitleLabel.text = subtitle
-        navigationButton.setTitle(buttonTitle, for: .normal)
-//        navigationButton.backgroundColor = .green
-    }
-}
+//
+////    override func prepareForReuse() {
+////        titleText
+////    }
+//
+//    @IBAction func setupButton(_ sender: Any) {
+//        buttonAction?()
+//    }
+//
+//    func display(title: String, subtitle: String, buttonTitle: String) {
+//        titleLabel.text = title
+//        subtitleLabel.text = subtitle
+//        navigationButton.setTitle(buttonTitle, for: .normal)
+////        navigationButton.backgroundColor = .green
+//    }
+//}
