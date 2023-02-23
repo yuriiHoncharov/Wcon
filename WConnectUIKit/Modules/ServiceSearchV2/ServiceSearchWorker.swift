@@ -1,5 +1,5 @@
 //
-//  ServiceSearchV2Worker.swift
+//  ServiceSearchWorker.swift
 //  WConnectUIKit
 //
 //  Created by Yurii Honcharov on 23.02.2023.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol ServiceSearchV2WorkerProtocol: AnyObject {
+protocol ServiceSearchWorkerProtocol: AnyObject {
     // MARK: - Requests
     
     // MARK: - Other logic
 }
 
-class ServiceSearchV2Worker: ServiceSearchV2WorkerProtocol {
+class ServiceSearchWorker: ServiceSearchWorkerProtocol {
     // MARK: - Variables
     
     // MARK: - Requests

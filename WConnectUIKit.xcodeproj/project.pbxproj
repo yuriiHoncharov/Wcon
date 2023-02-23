@@ -47,14 +47,14 @@
 		1FA4924D299E4E980018735E /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA4924C299E4E980018735E /* HTTPClient.swift */; };
 		1FA8209E29A3732100504D26 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA8209D29A3732100504D26 /* ServiceRequest.swift */; };
 		1FA820A429A3791800504D26 /* ServiceSearchMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA820A329A3791800504D26 /* ServiceSearchMapper.swift */; };
-		1FCCB04929A76815003295CE /* ServiceSearchV2Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04129A76815003295CE /* ServiceSearchV2Presenter.swift */; };
-		1FCCB04A29A76815003295CE /* ServiceSearchV2Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04229A76815003295CE /* ServiceSearchV2Worker.swift */; };
-		1FCCB04B29A76815003295CE /* ServiceSearchV2Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04329A76815003295CE /* ServiceSearchV2Router.swift */; };
-		1FCCB04C29A76815003295CE /* ServiceSearchV2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCB04429A76815003295CE /* ServiceSearchV2ViewController.storyboard */; };
-		1FCCB04D29A76815003295CE /* ServiceSearchV2Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04529A76815003295CE /* ServiceSearchV2Models.swift */; };
-		1FCCB04E29A76815003295CE /* ServiceSearchV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04629A76815003295CE /* ServiceSearchV2ViewController.swift */; };
-		1FCCB04F29A76815003295CE /* ServiceSearchV2Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04729A76815003295CE /* ServiceSearchV2Builder.swift */; };
-		1FCCB05029A76815003295CE /* ServiceSearchV2Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04829A76815003295CE /* ServiceSearchV2Interactor.swift */; };
+		1FCCB04929A76815003295CE /* ServiceSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04129A76815003295CE /* ServiceSearchPresenter.swift */; };
+		1FCCB04A29A76815003295CE /* ServiceSearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04229A76815003295CE /* ServiceSearchWorker.swift */; };
+		1FCCB04B29A76815003295CE /* ServiceSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04329A76815003295CE /* ServiceSearchRouter.swift */; };
+		1FCCB04C29A76815003295CE /* ServiceSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCB04429A76815003295CE /* ServiceSearchViewController.storyboard */; };
+		1FCCB04D29A76815003295CE /* ServiceSearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04529A76815003295CE /* ServiceSearchModels.swift */; };
+		1FCCB04E29A76815003295CE /* ServiceSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04629A76815003295CE /* ServiceSearchViewController.swift */; };
+		1FCCB04F29A76815003295CE /* ServiceSearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04729A76815003295CE /* ServiceSearchBuilder.swift */; };
+		1FCCB05029A76815003295CE /* ServiceSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB04829A76815003295CE /* ServiceSearchInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,14 +100,14 @@
 		1FA4924C299E4E980018735E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		1FA8209D29A3732100504D26 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		1FA820A329A3791800504D26 /* ServiceSearchMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchMapper.swift; sourceTree = "<group>"; };
-		1FCCB04129A76815003295CE /* ServiceSearchV2Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Presenter.swift; sourceTree = "<group>"; };
-		1FCCB04229A76815003295CE /* ServiceSearchV2Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Worker.swift; sourceTree = "<group>"; };
-		1FCCB04329A76815003295CE /* ServiceSearchV2Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Router.swift; sourceTree = "<group>"; };
-		1FCCB04429A76815003295CE /* ServiceSearchV2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceSearchV2ViewController.storyboard; sourceTree = "<group>"; };
-		1FCCB04529A76815003295CE /* ServiceSearchV2Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Models.swift; sourceTree = "<group>"; };
-		1FCCB04629A76815003295CE /* ServiceSearchV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2ViewController.swift; sourceTree = "<group>"; };
-		1FCCB04729A76815003295CE /* ServiceSearchV2Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Builder.swift; sourceTree = "<group>"; };
-		1FCCB04829A76815003295CE /* ServiceSearchV2Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchV2Interactor.swift; sourceTree = "<group>"; };
+		1FCCB04129A76815003295CE /* ServiceSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchPresenter.swift; sourceTree = "<group>"; };
+		1FCCB04229A76815003295CE /* ServiceSearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchWorker.swift; sourceTree = "<group>"; };
+		1FCCB04329A76815003295CE /* ServiceSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchRouter.swift; sourceTree = "<group>"; };
+		1FCCB04429A76815003295CE /* ServiceSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceSearchViewController.storyboard; sourceTree = "<group>"; };
+		1FCCB04529A76815003295CE /* ServiceSearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchModels.swift; sourceTree = "<group>"; };
+		1FCCB04629A76815003295CE /* ServiceSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchViewController.swift; sourceTree = "<group>"; };
+		1FCCB04729A76815003295CE /* ServiceSearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchBuilder.swift; sourceTree = "<group>"; };
+		1FCCB04829A76815003295CE /* ServiceSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,14 +364,14 @@
 			children = (
 				1FCCB05229A77601003295CE /* Mapper */,
 				1FCCB05129A775DF003295CE /* Cells */,
-				1FCCB04129A76815003295CE /* ServiceSearchV2Presenter.swift */,
-				1FCCB04229A76815003295CE /* ServiceSearchV2Worker.swift */,
-				1FCCB04329A76815003295CE /* ServiceSearchV2Router.swift */,
-				1FCCB04429A76815003295CE /* ServiceSearchV2ViewController.storyboard */,
-				1FCCB04529A76815003295CE /* ServiceSearchV2Models.swift */,
-				1FCCB04629A76815003295CE /* ServiceSearchV2ViewController.swift */,
-				1FCCB04729A76815003295CE /* ServiceSearchV2Builder.swift */,
-				1FCCB04829A76815003295CE /* ServiceSearchV2Interactor.swift */,
+				1FCCB04129A76815003295CE /* ServiceSearchPresenter.swift */,
+				1FCCB04229A76815003295CE /* ServiceSearchWorker.swift */,
+				1FCCB04329A76815003295CE /* ServiceSearchRouter.swift */,
+				1FCCB04429A76815003295CE /* ServiceSearchViewController.storyboard */,
+				1FCCB04529A76815003295CE /* ServiceSearchModels.swift */,
+				1FCCB04629A76815003295CE /* ServiceSearchViewController.swift */,
+				1FCCB04729A76815003295CE /* ServiceSearchBuilder.swift */,
+				1FCCB04829A76815003295CE /* ServiceSearchInteractor.swift */,
 			);
 			path = ServiceSearchV2;
 			sourceTree = "<group>";
@@ -451,7 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCCB04C29A76815003295CE /* ServiceSearchV2ViewController.storyboard in Resources */,
+				1FCCB04C29A76815003295CE /* ServiceSearchViewController.storyboard in Resources */,
 				1F6596C829A6046000BE4941 /* STableViewCell.xib in Resources */,
 				1FA49225299E3E610018735E /* LaunchScreen.storyboard in Resources */,
 				1F62546829A61B320039E0F2 /* Collors.xcassets in Resources */,
@@ -469,15 +469,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCCB04929A76815003295CE /* ServiceSearchV2Presenter.swift in Sources */,
+				1FCCB04929A76815003295CE /* ServiceSearchPresenter.swift in Sources */,
 				1F6596C429A3D19100BE4941 /* Extension+UITableView.swift in Sources */,
 				1FA4924B299E4E6D0018735E /* JSONParserServiceProtocol.swift in Sources */,
 				1F2E544D299FC10C0084B6C6 /* Extension+UIView.swift in Sources */,
-				1FCCB04E29A76815003295CE /* ServiceSearchV2ViewController.swift in Sources */,
+				1FCCB04E29A76815003295CE /* ServiceSearchViewController.swift in Sources */,
 				1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */,
 				1F591CD729A674580044B816 /* Keychain.swift in Sources */,
 				1F7099A3299E6D6700431F3D /* GetServiceApiEntity.swift in Sources */,
-				1FCCB05029A76815003295CE /* ServiceSearchV2Interactor.swift in Sources */,
+				1FCCB05029A76815003295CE /* ServiceSearchInteractor.swift in Sources */,
 				1FA820A429A3791800504D26 /* ServiceSearchMapper.swift in Sources */,
 				1F7099A1299E6CBF00431F3D /* CategoriesApiEntity.swift in Sources */,
 				1F7099A5299E70E100431F3D /* BlogRequest.swift in Sources */,
@@ -487,7 +487,7 @@
 				1F2E543A299E8A4C0084B6C6 /* Extension+UIViewController.swift in Sources */,
 				1F70999C299E6BE300431F3D /* LocalizedApiTitle.swift in Sources */,
 				1FA8209E29A3732100504D26 /* ServiceRequest.swift in Sources */,
-				1FCCB04A29A76815003295CE /* ServiceSearchV2Worker.swift in Sources */,
+				1FCCB04A29A76815003295CE /* ServiceSearchWorker.swift in Sources */,
 				1F6596C729A6046000BE4941 /* STableViewCell.swift in Sources */,
 				1F7099A9299E795B00431F3D /* Extension+UINavigationController.swift in Sources */,
 				1F591CDF29A74A690044B816 /* RefreshTokenApiEntity.swift in Sources */,
@@ -495,17 +495,17 @@
 				1F591CE729A74FCF0044B816 /* RequestHandler.swift in Sources */,
 				1FA4924D299E4E980018735E /* HTTPClient.swift in Sources */,
 				1FA49219299E3E600018735E /* AppDelegate.swift in Sources */,
-				1FCCB04F29A76815003295CE /* ServiceSearchV2Builder.swift in Sources */,
+				1FCCB04F29A76815003295CE /* ServiceSearchBuilder.swift in Sources */,
 				1F2E544B299FC0DC0084B6C6 /* Extension+UICollectionView.swift in Sources */,
 				1FA49245299E4A320018735E /* APIEndpoints.swift in Sources */,
-				1FCCB04D29A76815003295CE /* ServiceSearchV2Models.swift in Sources */,
+				1FCCB04D29A76815003295CE /* ServiceSearchModels.swift in Sources */,
 				1F591CDD29A675370044B816 /* Constants.swift in Sources */,
 				1F591CDA29A674980044B816 /* NetworkMonitor.swift in Sources */,
 				1FA49238299E430D0018735E /* HomeViewController.swift in Sources */,
 				1F709997299E67E900431F3D /* Base.swift in Sources */,
 				1F591CD629A674580044B816 /* AccessDataEntity.swift in Sources */,
 				1F70999F299E6C1E00431F3D /* LanguageManager.swift in Sources */,
-				1FCCB04B29A76815003295CE /* ServiceSearchV2Router.swift in Sources */,
+				1FCCB04B29A76815003295CE /* ServiceSearchRouter.swift in Sources */,
 				1F709999299E6BA500431F3D /* BlogsApiEntity.swift in Sources */,
 				1F3A07DD29A38C10007EA30C /* DateFormaterUtility.swift in Sources */,
 				1F2E5450299FC3560084B6C6 /* HomeCollectionViewCell.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ServiceSearchV2Interactor.swift
+//  ServiceSearchInteractor.swift
 //  WConnectUIKit
 //
 //  Created by Yurii Honcharov on 23.02.2023.
@@ -7,21 +7,21 @@
 
 import Foundation
 
-protocol ServiceSearchV2InteractorProtocol {
+protocol ServiceSearchInteractorProtocol {
     func getData()
     
 }
 
-protocol ServiceSearchV2DataStore: AnyObject {
+protocol ServiceSearchDataStore: AnyObject {
 }
 
-class ServiceSearchV2Interactor: ServiceSearchV2InteractorProtocol, ServiceSearchV2DataStore {
-    private let presenter: ServiceSearchV2PresenterProtocol?
-    private let worker: ServiceSearchV2WorkerProtocol?
+class ServiceSearchInteractor: ServiceSearchInteractorProtocol, ServiceSearchDataStore {
+    private let presenter: ServiceSearchPresenterProtocol?
+    private let worker: ServiceSearchWorkerProtocol?
     private let apiRequest = ServiceRequest()
     private var services: [SearchEntity] = []
     
-    required init(worker: ServiceSearchV2WorkerProtocol, presenter: ServiceSearchV2PresenterProtocol) {
+    required init(worker: ServiceSearchWorkerProtocol, presenter: ServiceSearchPresenterProtocol) {
         self.worker = worker
         self.presenter = presenter
     }

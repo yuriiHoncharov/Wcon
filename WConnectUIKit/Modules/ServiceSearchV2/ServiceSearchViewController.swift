@@ -1,5 +1,5 @@
 //
-//  ServiceSearchV2ViewController.swift
+//  ServiceSearchViewController.swift
 //  WConnectUIKit
 //
 //  Created by Yurii Honcharov on 23.02.2023.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-protocol ServiceSearchV2ViewControllerProtocol: AnyObject {
-    func configure(_ entities: [ServiceSearchV2Entity.View.SearchItemEntity])
+protocol ServiceSearchViewControllerProtocol: AnyObject {
+    func configure(_ entities: [ServiceSearchEntity.View.SearchItemEntity])
 }
 
-class ServiceSearchV2ViewController: UIViewController {
+class ServiceSearchViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    static let builder = ServiceSearchV2Builder()
-    private var interactor: ServiceSearchV2InteractorProtocol!
-    private var router: ServiceSearchV2RouterProtocol!
-    private var services: [ServiceSearchV2Entity.View.SearchItemEntity] = []
+    static let builder = ServiceSearchBuilder()
+    private var interactor: ServiceSearchInteractorProtocol!
+    private var router: ServiceSearchRouterProtocol!
+    private var services: [ServiceSearchEntity.View.SearchItemEntity] = []
     
     // MARK: - Setup
     
-    func initialSetup(interactor: ServiceSearchV2InteractorProtocol, router: ServiceSearchV2RouterProtocol) {
+    func initialSetup(interactor: ServiceSearchInteractorProtocol, router: ServiceSearchRouterProtocol) {
         self.interactor = interactor
         self.router = router
     }
@@ -45,7 +45,7 @@ class ServiceSearchV2ViewController: UIViewController {
     }
 }
 
-extension ServiceSearchV2ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return services.count
@@ -73,8 +73,8 @@ extension ServiceSearchV2ViewController: UITableViewDataSource, UITableViewDeleg
 }
 
 
-extension ServiceSearchV2ViewController: ServiceSearchV2ViewControllerProtocol {
-    func configure(_ entities: [ServiceSearchV2Entity.View.SearchItemEntity]) {
+extension ServiceSearchViewController: ServiceSearchViewControllerProtocol {
+    func configure(_ entities: [ServiceSearchEntity.View.SearchItemEntity]) {
         self.services = entities
         
         DispatchQueue.main.async {

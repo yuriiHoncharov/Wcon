@@ -40,7 +40,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.buttonAction = { [weak self] in
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                let vc = ServiceSearchV2ViewController.builder.default()
+                let vc = ServiceSearchViewController.builder.default()
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

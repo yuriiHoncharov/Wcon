@@ -42,7 +42,7 @@ class STableViewCell: UITableViewCell {
         
     }
     
-    func setService(service: ServiceSearchV2Entity.View.SearchItemEntity) {
+    func setService(service: ServiceSearchEntity.View.SearchItemEntity) {
         backgroundImage.cornerRadius = 10
         backgroundImage.backgroundColor = UIColor(named: "BaseWhite")
         userImage.backgroundColor = .red

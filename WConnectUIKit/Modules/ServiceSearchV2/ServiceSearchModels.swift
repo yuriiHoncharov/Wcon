@@ -1,5 +1,5 @@
 //
-//  ServiceSearchV2Models.swift
+//  ServiceSearchModels.swift
 //  WConnectUIKit
 //
 //  Created by Yurii Honcharov on 23.02.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ServiceSearchV2Entity {
+enum ServiceSearchEntity {
     struct Request {
         
     }
