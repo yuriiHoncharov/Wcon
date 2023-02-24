@@ -56,7 +56,7 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
         let cell = tableView.dequeue(STableViewCell.self, indexPath)
         
         cell.setService(service: service)
-        cell.backgroundColor = UIColor(named: "BackgroundGray")
+        cell.backgroundColor = UIColor(named: Color.backgroundGray)
         return cell
     }
     

@@ -13,6 +13,7 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func display(serviceImage: UIImage, serviceText: String) {
@@ -21,5 +22,6 @@ class HorizontalCollectionViewCell: UICollectionViewCell {
         viewImage.layer.cornerRadius = 4
         
         serviceLabel.text = serviceText
+        serviceLabel.textColor = UIColor(named: Color.baseWhite)
     }
 }

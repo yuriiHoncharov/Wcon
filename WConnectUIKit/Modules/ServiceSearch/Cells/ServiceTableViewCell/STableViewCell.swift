@@ -44,7 +44,7 @@ class STableViewCell: UITableViewCell {
     
     func setService(service: ServiceSearchEntity.View.SearchItemEntity) {
         backgroundImage.cornerRadius = 10
-        backgroundImage.backgroundColor = UIColor(named: "BaseWhite")
+        backgroundImage.backgroundColor = UIColor(named: Color.baseWhite)
         userImage.backgroundColor = .red
         userNameLabel.text = String("\(service.name)  \(service.surname)")
 //        serviceLabel.text = service.category
