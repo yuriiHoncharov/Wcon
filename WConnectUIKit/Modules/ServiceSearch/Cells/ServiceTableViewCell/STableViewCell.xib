@@ -97,6 +97,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundImage" destination="xKU-O4-RNH" id="8tB-M7-vro"/>
+                <outlet property="favouriteStateButton" destination="8Jt-Fm-EHc" id="8wZ-KO-Hun"/>
                 <outlet property="serviceCommentLabel" destination="jza-Nx-yLj" id="YRd-qN-9J7"/>
                 <outlet property="serviceLabel" destination="un8-BG-ixL" id="8Fz-Ts-QWf"/>
                 <outlet property="servicePriceLabel" destination="fgS-sz-f48" id="3KI-vj-mX3"/>

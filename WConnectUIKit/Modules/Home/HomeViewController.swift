@@ -12,6 +12,19 @@ protocol HomeViewControllerProtocol: AnyObject {
     
 }
 
+private enum HomeCells: Int, CaseIterable {
+//    case search
+    case title
+    case horizontalScrollWithImage
+    case subtitle
+//    case horizontalScrollWithCategory
+//    case blogs
+    
+    static func defaultSectionCount() -> Int {
+        return 3
+    }
+}
+
 class HomeViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -53,9 +66,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 0 {
             let cell = tableView.dequeue(HomeTableViewCell.self, indexPath)
-            cell.display(title: Constants.Home.watchAll, subtitle: Constants.Home.homeTitle, buttonTitle: Constants.Home.popularService)
+            cell.display(title: Constants.Home.popularService, subtitle: Constants.Home.homeTitle, buttonTitle: Constants.Home.watchAll)
             cell.buttonAction = { [weak self] in
                 guard let self = self else { return }
+               // self.router.navigationToServiceSearch()
                 let vc = ServiceSearchViewController.builder.default()
                 self.navigationController?.pushViewController(vc, animated: true)
             }
@@ -68,6 +82,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.display(title: Constants.Home.category, subtitle: "", buttonTitle: Constants.Home.allOrders)
             cell.buttonAction = { [weak self] in
                 guard let self = self else { return }
+                //TODO: update
+               // self.router.navigationToServiceSearch()
                 let vc = ServiceSearchViewController.builder.default()
                 self.navigationController?.pushViewController(vc, animated: true)
             }

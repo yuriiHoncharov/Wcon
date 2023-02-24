@@ -8,6 +8,7 @@
 import UIKit
 
 protocol HomeRouterProtocol: AnyObject {
+   func navigationToServiceSearch()
 }
 
 class HomeRouter: HomeRouterProtocol {
@@ -17,5 +18,13 @@ class HomeRouter: HomeRouterProtocol {
     required init(view: UIViewController, interactor: HomeDataStore) {
         self.view = view
         self.dataStore = interactor
+    }
+    
+    func navigationToServiceSearch() {
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            let vc = ServiceSearchViewController.builder.default()
+            self.view.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

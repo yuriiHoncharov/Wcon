@@ -57,6 +57,13 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
         
         cell.setService(service: service)
         cell.backgroundColor = UIColor(named: Color.backgroundGray)
+        cell.favouriteButton = { [weak self] in
+            guard let self else { return }
+            cell.favouriteStateButton.setImage(UIImage(named: Image.fauvoriteFilled), for: .normal)
+//                .onTapedGesture {
+//
+//                }
+        }
         return cell
     }
     

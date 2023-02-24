@@ -6,6 +6,9 @@
 //
 
 import UIKit
+//protocol HomeTableViewCellProtocol: AnyObject {
+//    buttonAction (() -> Void)?
+//}
 
 class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
