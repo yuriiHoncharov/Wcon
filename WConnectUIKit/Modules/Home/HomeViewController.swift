@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         
         tableView.register(HomeTableViewCell.self)
+        tableView.register(HorizontalTableViewCell.self)
     }
 }
 
@@ -48,23 +49,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(HomeTableViewCell.self, indexPath)
-        cell.display()
-        cell.buttonAction = { [weak self] in
-//            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                let vc = ServiceSearchViewController.builder.default()
-                self.navigationController?.pushViewController(vc, animated: true)
-//            }
-        }
-        cell.backgroundColor =  UIColor(named: "BackgroundGray")
+//        let cell = tableView.dequeue(HomeTableViewCell.self, indexPath)
+//        cell.display()
+//        cell.buttonAction = { [weak self] in
+//            guard let self = self else { return }
+//            let vc = ServiceSearchViewController.builder.default()
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+//        cell.backgroundColor =  UIColor(named: "BackgroundGray")
+//        return cell
+        
+        let cell = tableView.dequeue(HorizontalTableViewCell.self, indexPath)
         return cell
     }
 }
 
 extension HomeViewController: HomeViewControllerProtocol {
     
-//    DispatchQueue.main.async {
-//        tableView.reloadData()
-//    }
+    //    DispatchQueue.main.async {
+    //        tableView.reloadData()
+    //    }
 }
