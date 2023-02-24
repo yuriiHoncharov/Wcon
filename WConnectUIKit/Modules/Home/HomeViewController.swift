@@ -38,7 +38,8 @@ class HomeViewController: UIViewController {
     private func setupCollectionView() {
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor(named: "BackgroundGray")
         tableView.register(HomeTableViewCell.self)
         tableView.register(HorizontalTableViewCell.self)
     }
@@ -46,21 +47,22 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeue(HomeTableViewCell.self, indexPath)
-//        cell.display()
-//        cell.buttonAction = { [weak self] in
-//            guard let self = self else { return }
-//            let vc = ServiceSearchViewController.builder.default()
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
-//        cell.backgroundColor =  UIColor(named: "BackgroundGray")
-//        return cell
-        
-        let cell = tableView.dequeue(HorizontalTableViewCell.self, indexPath)
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeue(HomeTableViewCell.self, indexPath)
+            cell.display()
+            cell.buttonAction = { [weak self] in
+                guard let self = self else { return }
+                let vc = ServiceSearchViewController.builder.default()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+            return cell
+        } else {
+            let cell = tableView.dequeue(HorizontalTableViewCell.self, indexPath)
+            return cell
+        }
     }
 }
 

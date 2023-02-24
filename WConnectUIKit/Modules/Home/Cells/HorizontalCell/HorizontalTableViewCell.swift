@@ -33,6 +33,8 @@ class HorizontalTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollection()
+        backgroundColor = UIColor(named: "BackgroundGray")
+
     }
     
     private func setupCollection() {
