@@ -26,18 +26,6 @@ class STableViewCell: UITableViewCell {
         contentView.layer.cornerRadius = 8
     }
     
-    //    override func layoutSubviews() {
-    //    }
-    
-    //    override func awakeFromNib() {
-    //        super.awakeFromNib()
-    //    }
-    
-    //    override func setSelected(_ selected: Bool, animated: Bool) {
-    //        super.setSelected(selected, animated: animated)
-    //    }
-    //
-    
     @IBAction func favouriteButton(_ sender: Any) {
         favouriteButton?()
     }
@@ -57,57 +45,3 @@ class STableViewCell: UITableViewCell {
         userNameLabel.text = String("\(service.name)  \(service.surname)")
     }
 }
-
-extension UIImageView {
-    
-    func makeRounded() {
-        layer.borderWidth = 0.1
-        layer.masksToBounds = false
-        layer.borderColor = UIColor.black.cgColor
-        layer.cornerRadius = self.frame.height / 2
-        clipsToBounds = true
-    }
-    
-    func load(string: String) {
-        if let url = URL(string: string) {
-            DispatchQueue.global().async { [weak self] in
-                if let data = try? Data(contentsOf: url) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.image = image
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-//    func scalePreservingAspectRatio(targetSize: CGSize) -> UIImage {
-//        // Determine the scale factor that preserves aspect ratio
-//        let widthRatio = targetSize.width / size.width
-//        let heightRatio = targetSize.height / size.height
-//
-//        let scaleFactor = min(widthRatio, heightRatio)
-//
-//        // Compute the new image size that preserves aspect ratio
-//        let scaledImageSize = CGSize(
-//            width: size.width * scaleFactor,
-//            height: size.height * scaleFactor
-//        )
-//
-//        // Draw and return the resized UIImage
-//        let renderer = UIGraphicsImageRenderer(
-//            size: scaledImageSize
-//        )
-//
-//        let scaledImage = renderer.image { _ in
-//            self.draw(in: CGRect(
-//                origin: .zero,
-//                size: scaledImageSize
-//            ))
-//        }
-//
-//        return scaledImage
-//    }
-}
-

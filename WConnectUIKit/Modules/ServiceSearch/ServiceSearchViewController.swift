@@ -35,6 +35,7 @@ class ServiceSearchViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         interactor.getData()
+//        setNavigationBar()
         tableView.separatorStyle = .none
     }
     
@@ -43,6 +44,16 @@ class ServiceSearchViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(STableViewCell.self)
     }
+    
+//    private func setNavigationBar() {
+//        let screenSize: CGRect = UIScreen.main.bounds
+//           let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 44))
+//           let navItem = UINavigationItem(title: "")
+//           let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
+//           navItem.rightBarButtonItem = doneItem
+//           navBar.setItems([navItem], animated: false)
+//           self.view.addSubview(navBar)
+//    }
 }
 
 extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -60,9 +71,6 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
         cell.favouriteButton = { [weak self] in
             guard let self else { return }
             cell.favouriteStateButton.setImage(UIImage(named: Image.fauvoriteFilled), for: .normal)
-//                .onTapedGesture {
-//
-//                }
         }
         return cell
     }
