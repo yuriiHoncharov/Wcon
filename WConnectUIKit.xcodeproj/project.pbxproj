@@ -63,6 +63,8 @@
 		1FCCB07929A77E7E003295CE /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB07729A77E7E003295CE /* HomeTableViewCell.swift */; };
 		1FCCB07A29A77E7E003295CE /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCB07829A77E7E003295CE /* HomeTableViewCell.xib */; };
 		1FCCB07C29A78517003295CE /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB07B29A78517003295CE /* Extension+UITableView.swift */; };
+		1FF192EC29A8BF0A00F68700 /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF192EA29A8BF0A00F68700 /* HorizontalTableViewCell.swift */; };
+		1FF192ED29A8BF0A00F68700 /* HorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF192EB29A8BF0A00F68700 /* HorizontalTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,8 @@
 		1FCCB07729A77E7E003295CE /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1FCCB07829A77E7E003295CE /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		1FCCB07B29A78517003295CE /* Extension+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extension+UITableView.swift"; path = "../../../../../dogiz_2.0_ios/Dogiz/Helpers/Extensions/Extension+UITableView.swift"; sourceTree = "<group>"; };
+		1FF192EA29A8BF0A00F68700 /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
+		1FF192EB29A8BF0A00F68700 /* HorizontalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,17 +431,10 @@
 		1FCCB07629A77E56003295CE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1FF192E929A8BE4600F68700 /* HorizontalCell */,
 				1FCCB07F29A7A8BD003295CE /* FirstCell */,
-				1FCCB07E29A7A89F003295CE /* HorizontalCell */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		1FCCB07E29A7A89F003295CE /* HorizontalCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HorizontalCell;
 			sourceTree = "<group>";
 		};
 		1FCCB07F29A7A8BD003295CE /* FirstCell */ = {
@@ -447,6 +444,15 @@
 				1FCCB07829A77E7E003295CE /* HomeTableViewCell.xib */,
 			);
 			path = FirstCell;
+			sourceTree = "<group>";
+		};
+		1FF192E929A8BE4600F68700 /* HorizontalCell */ = {
+			isa = PBXGroup;
+			children = (
+				1FF192EA29A8BF0A00F68700 /* HorizontalTableViewCell.swift */,
+				1FF192EB29A8BF0A00F68700 /* HorizontalTableViewCell.xib */,
+			);
+			path = HorizontalCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +515,7 @@
 			files = (
 				1FCCB04C29A76815003295CE /* ServiceSearchViewController.storyboard in Resources */,
 				1F6596C829A6046000BE4941 /* STableViewCell.xib in Resources */,
+				1FF192ED29A8BF0A00F68700 /* HorizontalTableViewCell.xib in Resources */,
 				1FA49225299E3E610018735E /* LaunchScreen.storyboard in Resources */,
 				1F62546829A61B320039E0F2 /* Collors.xcassets in Resources */,
 				1FCCB07129A77A62003295CE /* HomeViewController.storyboard in Resources */,
@@ -568,6 +575,7 @@
 				1FCCB07529A77A62003295CE /* HomeInteractor.swift in Sources */,
 				1FCCB07029A77A62003295CE /* HomeRouter.swift in Sources */,
 				1F591CD629A674580044B816 /* AccessDataEntity.swift in Sources */,
+				1FF192EC29A8BF0A00F68700 /* HorizontalTableViewCell.swift in Sources */,
 				1F70999F299E6C1E00431F3D /* LanguageManager.swift in Sources */,
 				1FCCB04B29A76815003295CE /* ServiceSearchRouter.swift in Sources */,
 				1F709999299E6BA500431F3D /* BlogsApiEntity.swift in Sources */,
