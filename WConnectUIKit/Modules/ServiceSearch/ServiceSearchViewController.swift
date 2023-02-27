@@ -35,7 +35,7 @@ class ServiceSearchViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         interactor.getData()
-//        setNavigationBar()
+        setNavigationBar()
         tableView.separatorStyle = .none
     }
     
@@ -45,15 +45,9 @@ class ServiceSearchViewController: UIViewController {
         tableView.register(STableViewCell.self)
     }
     
-//    private func setNavigationBar() {
-//        let screenSize: CGRect = UIScreen.main.bounds
-//           let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 44))
-//           let navItem = UINavigationItem(title: "")
-//           let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: nil, action: #selector(done))
-//           navItem.rightBarButtonItem = doneItem
-//           navBar.setItems([navItem], animated: false)
-//           self.view.addSubview(navBar)
-//    }
+    private func setNavigationBar() {
+        self.makeTransparentNavigationBar()
+    }
 }
 
 extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegate {

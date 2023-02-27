@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeRouterProtocol: AnyObject {
    func navigationToServiceSearch()
+   func navigateTo()
 }
 
 class HomeRouter: HomeRouterProtocol {
@@ -18,6 +19,20 @@ class HomeRouter: HomeRouterProtocol {
     required init(view: UIViewController, interactor: HomeDataStore) {
         self.view = view
         self.dataStore = interactor
+    }
+    
+    func navigateTo() {
+        var navigationVC: UINavigationController
+        var vc: UIViewController
+        vc = ServiceSearchViewController()
+
+        navigationVC = UINavigationController(rootViewController: vc)
+        navigationVC.navigationBar.isHidden = true
+        navigationVC.modalPresentationStyle = .fullScreen
+        
+        DispatchQueue.main.async {
+            self.view.present(navigationVC, animated: true, completion: nil)
+        }
     }
     
     func navigationToServiceSearch() {

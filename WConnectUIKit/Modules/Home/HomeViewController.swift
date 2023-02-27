@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeViewControllerProtocol: AnyObject {
-    
+    func navigateTo()
 }
 
 private enum HomeCells: Int, CaseIterable {
@@ -93,7 +93,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeViewController: HomeViewControllerProtocol {
-    
+    func navigateTo() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.router.navigateTo()
+        }
+    }
     //    DispatchQueue.main.async {
     //        tableView.reloadData()
     //    }
