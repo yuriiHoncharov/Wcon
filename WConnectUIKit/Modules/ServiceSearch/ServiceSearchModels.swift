@@ -24,6 +24,8 @@ enum ServiceSearchEntity {
             var isFavorite: Bool
             var avatar: String
             var comment: String
+            var priceFrom: Int
+            var priceTo: Int
         }
     }
 }

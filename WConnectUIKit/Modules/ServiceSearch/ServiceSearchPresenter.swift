@@ -21,15 +21,17 @@ class ServiceSearchPresenter: ServiceSearchPresenterProtocol {
     func configure(_ entities: [SearchEntity], dateUtility: DateFormatterUtility) {
         var viewEntites: [ServiceSearchEntity.View.SearchItemEntity] = []
         for entity in entities {
-     
+            
             let viewEntity = ServiceSearchEntity.View.SearchItemEntity(id: entity.id,
-                                                                         name: entity.firstName,
-                                                                         surname: entity.lastName,
-                                                                         category: entity.category,
-                                                                         day: entity.day,
-                                                                         isFavorite: entity.isFavorite,
-                                                                         avatar: entity.avatar,
-                                                                         comment: entity.comment)
+                                                                       name: entity.firstName,
+                                                                       surname: entity.lastName,
+                                                                       category: entity.category,
+                                                                       day: entity.day,
+                                                                       isFavorite: entity.isFavorite,
+                                                                       avatar: entity.avatar,
+                                                                       comment: entity.comment,
+                                                                       priceFrom: entity.priceFrom,
+                                                                       priceTo: entity.priceTo)
 //            let fullDate = dateUtility.date(from: entity.createdAt)
 //            let date = dateUtility.dayMonthYear(from: fullDate)
 //            let viewEntity = ServiceSearchEntity.View.SearchItemEntity(id: entity.id,

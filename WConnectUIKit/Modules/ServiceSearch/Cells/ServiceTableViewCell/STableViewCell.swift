@@ -13,10 +13,11 @@ class STableViewCell: UITableViewCell {
     @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var servicePriceLabel: UILabel!
     @IBOutlet weak var serviceCommentLabel: UILabel!
+    @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var favouriteStateButton: UIButton!
     var favouriteButton: (() -> Void)?
-    var contactButton: (() -> Void)?
+    var contactButtonHandler: (() -> Void)?
     
     
     override func layoutSubviews() {
@@ -31,17 +32,31 @@ class STableViewCell: UITableViewCell {
     }
     
     @IBAction func contactButton(_ sender: Any) {
-        contactButton?()
+        contactButtonHandler?()
     }
     
     func setService(service: ServiceSearchEntity.View.SearchItemEntity) {
+        // MARK: background
         backgroundImage.cornerRadius = 10
         backgroundImage.backgroundColor = UIColor(named: Color.baseWhite)
-        
+        // MARK: contactButton
+        contactButton.setTitle(Constants.Search.inviteToWork, for: .normal)
+        contactButton.tintColor = UIColor(named: Color.baseBlack)
+        contactButton.backgroundColor = .clear
+        contactButton.layer.cornerRadius = 4
+        contactButton.layer.borderWidth = 1
+        contactButton.layer.borderColor = UIColor(named: Color.primeryGreen100)?.cgColor
+        // MARK: userImage
         userImage.load(string: service.avatar)
         userImage.contentMode = .scaleAspectFill
         userImage.makeRounded()
-        
+        // MARK: serviceLabel
+        serviceLabel.text = service.category
+        // MARK: userNameLabel
         userNameLabel.text = String("\(service.name)  \(service.surname)")
+        // MARK: servicePriceLabel
+        servicePriceLabel.text = String("\(service.priceFrom) - \(service.priceTo)")
+        // MARK: serviceCommentLabel
+        serviceCommentLabel.text = service.comment
     }
 }

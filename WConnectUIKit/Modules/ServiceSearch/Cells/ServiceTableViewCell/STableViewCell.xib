@@ -39,7 +39,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSG-j3-8Pa">
-                        <rect key="frame" x="16" y="135.33333333333334" width="371" height="66.666666666666657"/>
+                        <rect key="frame" x="16" y="135.33333333333334" width="371" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Yds-hH-WEV"/>
+                        </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                         <connections>
@@ -76,7 +79,7 @@
                     <constraint firstAttribute="trailing" secondItem="xKU-O4-RNH" secondAttribute="trailing" id="2Sx-FP-fR4"/>
                     <constraint firstAttribute="bottom" secondItem="xKU-O4-RNH" secondAttribute="bottom" id="4Xq-AM-TQE"/>
                     <constraint firstItem="TDA-4s-hIS" firstAttribute="leading" secondItem="xKU-O4-RNH" secondAttribute="leading" constant="16" id="5sW-b0-mOC"/>
-                    <constraint firstItem="xKU-O4-RNH" firstAttribute="bottom" secondItem="wSG-j3-8Pa" secondAttribute="bottom" constant="16" id="8Cp-w3-pMR"/>
+                    <constraint firstItem="xKU-O4-RNH" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wSG-j3-8Pa" secondAttribute="bottom" constant="16" id="8Cp-w3-pMR"/>
                     <constraint firstItem="TDA-4s-hIS" firstAttribute="top" secondItem="xKU-O4-RNH" secondAttribute="top" constant="40" id="BVH-6P-1Ol"/>
                     <constraint firstItem="fgS-sz-f48" firstAttribute="leading" secondItem="TDA-4s-hIS" secondAttribute="leading" id="CTj-Ud-3tB"/>
                     <constraint firstItem="un8-BG-ixL" firstAttribute="leading" secondItem="TDA-4s-hIS" secondAttribute="trailing" constant="12" id="DTY-UC-1wj"/>
@@ -97,6 +100,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundImage" destination="xKU-O4-RNH" id="8tB-M7-vro"/>
+                <outlet property="contactButton" destination="wSG-j3-8Pa" id="FJ6-wh-TKw"/>
                 <outlet property="favouriteStateButton" destination="8Jt-Fm-EHc" id="8wZ-KO-Hun"/>
                 <outlet property="serviceCommentLabel" destination="jza-Nx-yLj" id="YRd-qN-9J7"/>
                 <outlet property="serviceLabel" destination="un8-BG-ixL" id="8Fz-Ts-QWf"/>

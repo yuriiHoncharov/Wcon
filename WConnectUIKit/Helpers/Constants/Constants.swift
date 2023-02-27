@@ -20,4 +20,8 @@ struct Constants {
         static let category = "Категории"
         static let allOrders = "Все заказы"
     }
+    
+    struct Search {
+        static let inviteToWork = "Пригласить на работу"
+    }
 }
