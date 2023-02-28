@@ -31,7 +31,7 @@ class ServiceSearchPresenter: ServiceSearchPresenterProtocol {
                                                                        avatar: entity.avatar,
                                                                        comment: entity.comment,
                                                                        priceFrom: entity.priceFrom,
-                                                                       priceTo: entity.priceTo)
+                                                                       priceTo: entity.priceTo, isPopular: entity.isPopular)
 //            let fullDate = dateUtility.date(from: entity.createdAt)
 //            let date = dateUtility.dayMonthYear(from: fullDate)
 //            let viewEntity = ServiceSearchEntity.View.SearchItemEntity(id: entity.id,

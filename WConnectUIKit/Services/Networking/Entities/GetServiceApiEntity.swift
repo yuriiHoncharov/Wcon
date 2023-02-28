@@ -18,7 +18,7 @@ enum ServiceSearchApiEntity {
         let district: String?
         let text: String?
         let page: Int?
-        let limit: Int = 20
+        let limit: Int = 50
     }
     
     struct Response: BaseResponseProtocol {

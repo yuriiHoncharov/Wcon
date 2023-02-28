@@ -17,16 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="urJ-P1-2Qa">
-                                <rect key="frame" x="0.0" y="136" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="136" width="414" height="760"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aqz-81-3g6">
                                 <rect key="frame" x="16" y="48" width="326" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="searchTextField:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="pmR-SG-l6e"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTz-x5-i00">
                                 <rect key="frame" x="358" y="50" width="40" height="30"/>
@@ -43,30 +40,31 @@
                                 <rect key="frame" x="0.0" y="135" width="414" height="1"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="fla-fK-TdU"/>
+                                    <constraint firstAttribute="height" constant="1" id="lap-Iz-SfZ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="urJ-P1-2Qa" secondAttribute="bottom" id="0wV-ox-tTf"/>
-                            <constraint firstItem="GNC-Wr-fcE" firstAttribute="top" secondItem="iDY-N6-Cxg" secondAttribute="bottom" constant="16" id="6rS-ms-M0K"/>
-                            <constraint firstItem="GNC-Wr-fcE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7xt-jL-g44"/>
                             <constraint firstItem="Aqz-81-3g6" firstAttribute="centerY" secondItem="zTz-x5-i00" secondAttribute="centerY" id="8kz-o5-5eh"/>
-                            <constraint firstItem="urJ-P1-2Qa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AcL-JF-S7c"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="urJ-P1-2Qa" secondAttribute="trailing" id="DGR-DO-SHJ"/>
+                            <constraint firstAttribute="bottom" secondItem="urJ-P1-2Qa" secondAttribute="bottom" id="Aep-ds-xOt"/>
+                            <constraint firstItem="urJ-P1-2Qa" firstAttribute="top" secondItem="GNC-Wr-fcE" secondAttribute="bottom" id="DJo-ry-W7Z"/>
                             <constraint firstItem="Aqz-81-3g6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="FlX-hv-8kk"/>
+                            <constraint firstItem="urJ-P1-2Qa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="PMn-76-ecb"/>
+                            <constraint firstAttribute="trailing" secondItem="GNC-Wr-fcE" secondAttribute="trailing" id="SNQ-ll-HYl"/>
+                            <constraint firstItem="GNC-Wr-fcE" firstAttribute="top" secondItem="iDY-N6-Cxg" secondAttribute="bottom" constant="16" id="UN3-Cj-ndu"/>
                             <constraint firstItem="iDY-N6-Cxg" firstAttribute="leading" secondItem="Aqz-81-3g6" secondAttribute="leading" id="VSo-sD-k3f"/>
                             <constraint firstItem="iDY-N6-Cxg" firstAttribute="top" secondItem="Aqz-81-3g6" secondAttribute="bottom" constant="16" id="Xar-M1-b0N"/>
                             <constraint firstItem="Aqz-81-3g6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ys8-ex-hRd"/>
-                            <constraint firstItem="urJ-P1-2Qa" firstAttribute="top" secondItem="GNC-Wr-fcE" secondAttribute="bottom" id="cB6-Fe-HGl"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GNC-Wr-fcE" secondAttribute="trailing" id="u6q-sj-g50"/>
+                            <constraint firstItem="GNC-Wr-fcE" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="mqn-Hn-MYO"/>
+                            <constraint firstItem="urJ-P1-2Qa" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="rrH-Oq-EG1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zTz-x5-i00" secondAttribute="trailing" constant="16" id="wJh-Zd-6DH"/>
                             <constraint firstItem="zTz-x5-i00" firstAttribute="leading" secondItem="Aqz-81-3g6" secondAttribute="trailing" constant="16" id="yr2-Bs-Hfr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchTextField" destination="Aqz-81-3g6" id="h2y-sc-HLc"/>
                         <outlet property="serviceCountLabel" destination="iDY-N6-Cxg" id="4wL-1I-2p6"/>
                         <outlet property="tableView" destination="urJ-P1-2Qa" id="pmT-YH-gDU"/>
                     </connections>

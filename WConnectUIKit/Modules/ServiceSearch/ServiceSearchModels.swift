@@ -26,6 +26,7 @@ enum ServiceSearchEntity {
             var comment: String
             var priceFrom: Int
             var priceTo: Int
+            var isPopular: Bool
         }
     }
 }

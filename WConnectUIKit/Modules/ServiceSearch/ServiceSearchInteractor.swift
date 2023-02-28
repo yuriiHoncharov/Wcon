@@ -37,12 +37,6 @@ class ServiceSearchInteractor: ServiceSearchInteractorProtocol, ServiceSearchDat
                self.services = data
                self.presenter?.configure(data, dateUtility: DateFormatterUtility())
         }
-
-//        { [weak self] data in
-//            guard let self else { return }
-//            self.services = data
-//            self.presenter?.configure(data, dateUtility: DateFormatterUtility())
-//        }
     }
     
     private func getService(totalCountHandler: ((Int) -> Void)?, completion: ((_ data: [SearchEntity]) -> Void)?) {

@@ -99,7 +99,4 @@ extension HomeViewController: HomeViewControllerProtocol {
             self.router.navigateTo()
         }
     }
-    //    DispatchQueue.main.async {
-    //        tableView.reloadData()
-    //    }
 }

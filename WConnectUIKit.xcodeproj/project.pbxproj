@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0C1A7529AE024200C413EE /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A6B29AE024200C413EE /* MainTabBarPresenter.swift */; };
+		1F0C1A7629AE024200C413EE /* MainTabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A6D29AE024200C413EE /* MainTabBarItems.swift */; };
+		1F0C1A7729AE024200C413EE /* MainTabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A6E29AE024200C413EE /* MainTabBarBuilder.swift */; };
+		1F0C1A7829AE024200C413EE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A6F29AE024200C413EE /* MainTabBarController.swift */; };
+		1F0C1A7929AE024200C413EE /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A7029AE024200C413EE /* MainTabBarInteractor.swift */; };
+		1F0C1A7A29AE024200C413EE /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A7129AE024200C413EE /* MainTabBarRouter.swift */; };
+		1F0C1A7B29AE024200C413EE /* MainTabBarWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A7229AE024200C413EE /* MainTabBarWorker.swift */; };
+		1F0C1A7C29AE024200C413EE /* MainTabBarModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C1A7329AE024200C413EE /* MainTabBarModels.swift */; };
+		1F0C1A7D29AE024300C413EE /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0C1A7429AE024200C413EE /* MainTabBarController.storyboard */; };
 		1F2E543A299E8A4C0084B6C6 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E5439299E8A4B0084B6C6 /* Extension+UIViewController.swift */; };
 		1F2E544B299FC0DC0084B6C6 /* Extension+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E544A299FC0DC0084B6C6 /* Extension+UICollectionView.swift */; };
 		1F2E544D299FC10C0084B6C6 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E544C299FC10C0084B6C6 /* Extension+UIView.swift */; };
@@ -73,6 +82,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0C1A6B29AE024200C413EE /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
+		1F0C1A6D29AE024200C413EE /* MainTabBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarItems.swift; sourceTree = "<group>"; };
+		1F0C1A6E29AE024200C413EE /* MainTabBarBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarBuilder.swift; sourceTree = "<group>"; };
+		1F0C1A6F29AE024200C413EE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		1F0C1A7029AE024200C413EE /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
+		1F0C1A7129AE024200C413EE /* MainTabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		1F0C1A7229AE024200C413EE /* MainTabBarWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarWorker.swift; sourceTree = "<group>"; };
+		1F0C1A7329AE024200C413EE /* MainTabBarModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarModels.swift; sourceTree = "<group>"; };
+		1F0C1A7429AE024200C413EE /* MainTabBarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
 		1F2E5439299E8A4B0084B6C6 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		1F2E544A299FC0DC0084B6C6 /* Extension+UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionView.swift"; sourceTree = "<group>"; };
 		1F2E544C299FC10C0084B6C6 /* Extension+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
@@ -151,6 +169,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0C1A6A29AE024200C413EE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1F0C1A6B29AE024200C413EE /* MainTabBarPresenter.swift */,
+				1F0C1A6C29AE024200C413EE /* Enum */,
+				1F0C1A6E29AE024200C413EE /* MainTabBarBuilder.swift */,
+				1F0C1A6F29AE024200C413EE /* MainTabBarController.swift */,
+				1F0C1A7029AE024200C413EE /* MainTabBarInteractor.swift */,
+				1F0C1A7129AE024200C413EE /* MainTabBarRouter.swift */,
+				1F0C1A7229AE024200C413EE /* MainTabBarWorker.swift */,
+				1F0C1A7329AE024200C413EE /* MainTabBarModels.swift */,
+				1F0C1A7429AE024200C413EE /* MainTabBarController.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1F0C1A6C29AE024200C413EE /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				1F0C1A6D29AE024200C413EE /* MainTabBarItems.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		1F591CD029A674580044B816 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +315,7 @@
 		1FA4922E299E3EA20018735E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1F0C1A6A29AE024200C413EE /* Main */,
 				1FCCB06529A77A4A003295CE /* Home */,
 				1FCCB04029A767D9003295CE /* ServiceSearch */,
 			);
@@ -507,6 +550,7 @@
 				1FD21FA529ACE8EB00486C6A /* ServiceSearchTableViewCell.xib in Resources */,
 				1FF192F429A8C0D800F68700 /* HorizontalCollectionViewCell.xib in Resources */,
 				1FCCB04C29A76815003295CE /* ServiceSearchViewController.storyboard in Resources */,
+				1F0C1A7D29AE024300C413EE /* MainTabBarController.storyboard in Resources */,
 				1F6596C829A6046000BE4941 /* STableViewCell.xib in Resources */,
 				1FF192ED29A8BF0A00F68700 /* HorizontalTableViewCell.xib in Resources */,
 				1FA49225299E3E610018735E /* LaunchScreen.storyboard in Resources */,
@@ -534,14 +578,18 @@
 				1FD21FA429ACE8EB00486C6A /* ServiceSearchTableViewCell.swift in Sources */,
 				1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */,
 				1F591CD729A674580044B816 /* Keychain.swift in Sources */,
+				1F0C1A7B29AE024200C413EE /* MainTabBarWorker.swift in Sources */,
 				1F7099A3299E6D6700431F3D /* GetServiceApiEntity.swift in Sources */,
+				1F0C1A7829AE024200C413EE /* MainTabBarController.swift in Sources */,
 				1FCCB05029A76815003295CE /* ServiceSearchInteractor.swift in Sources */,
 				1FA820A429A3791800504D26 /* ServiceSearchMapper.swift in Sources */,
 				1F7099A1299E6CBF00431F3D /* CategoriesApiEntity.swift in Sources */,
+				1F0C1A7929AE024200C413EE /* MainTabBarInteractor.swift in Sources */,
 				1F7099A5299E70E100431F3D /* BlogRequest.swift in Sources */,
 				1FA49249299E4DF10018735E /* HTTPClientError.swift in Sources */,
 				1FA49247299E4D650018735E /* APIService.swift in Sources */,
 				1F591CD529A674580044B816 /* SecureStorage.swift in Sources */,
+				1F0C1A7629AE024200C413EE /* MainTabBarItems.swift in Sources */,
 				1F2E543A299E8A4C0084B6C6 /* Extension+UIViewController.swift in Sources */,
 				1F70999C299E6BE300431F3D /* LocalizedApiTitle.swift in Sources */,
 				1FA8209E29A3732100504D26 /* ServiceRequest.swift in Sources */,
@@ -563,6 +611,7 @@
 				1FA49245299E4A320018735E /* APIEndpoints.swift in Sources */,
 				1FCCB04D29A76815003295CE /* ServiceSearchModels.swift in Sources */,
 				1FCCB07229A77A62003295CE /* HomeModels.swift in Sources */,
+				1F0C1A7729AE024200C413EE /* MainTabBarBuilder.swift in Sources */,
 				1F591CDD29A675370044B816 /* Constants.swift in Sources */,
 				1FF192F629A8D24100F68700 /* Colors.swift in Sources */,
 				1F591CDA29A674980044B816 /* NetworkMonitor.swift in Sources */,
@@ -571,8 +620,11 @@
 				1FCCB07529A77A62003295CE /* HomeInteractor.swift in Sources */,
 				1FCCB07029A77A62003295CE /* HomeRouter.swift in Sources */,
 				1F591CD629A674580044B816 /* AccessDataEntity.swift in Sources */,
+				1F0C1A7529AE024200C413EE /* MainTabBarPresenter.swift in Sources */,
 				1FF192EC29A8BF0A00F68700 /* HorizontalTableViewCell.swift in Sources */,
 				1F70999F299E6C1E00431F3D /* LanguageManager.swift in Sources */,
+				1F0C1A7C29AE024200C413EE /* MainTabBarModels.swift in Sources */,
+				1F0C1A7A29AE024200C413EE /* MainTabBarRouter.swift in Sources */,
 				1FCCB04B29A76815003295CE /* ServiceSearchRouter.swift in Sources */,
 				1F709999299E6BA500431F3D /* BlogsApiEntity.swift in Sources */,
 				1F3A07DD29A38C10007EA30C /* DateFormaterUtility.swift in Sources */,

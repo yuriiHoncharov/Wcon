@@ -67,12 +67,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqt-4G-bnW">
-                        <rect key="frame" x="60" y="34.333333333333336" width="40" height="18"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wlU-SX-xH9">
+                        <rect key="frame" x="60" y="32.333333333333336" width="94" height="20"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0x-GG-7aB">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz3-AX-xFP">
+                                <rect key="frame" x="54" y="0.0" width="40" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="SsY-jZ-ygx"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="wSG-j3-8Pa" firstAttribute="top" secondItem="jza-Nx-yLj" secondAttribute="bottom" constant="16" id="1ve-2n-BAT"/>
@@ -84,16 +95,16 @@
                     <constraint firstItem="fgS-sz-f48" firstAttribute="leading" secondItem="TDA-4s-hIS" secondAttribute="leading" id="CTj-Ud-3tB"/>
                     <constraint firstItem="un8-BG-ixL" firstAttribute="leading" secondItem="TDA-4s-hIS" secondAttribute="trailing" constant="12" id="DTY-UC-1wj"/>
                     <constraint firstItem="un8-BG-ixL" firstAttribute="bottom" secondItem="TDA-4s-hIS" secondAttribute="bottom" id="H0K-4M-3cM"/>
+                    <constraint firstItem="un8-BG-ixL" firstAttribute="top" secondItem="wlU-SX-xH9" secondAttribute="bottom" constant="4" id="Mi0-9t-l1s"/>
                     <constraint firstItem="xKU-O4-RNH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NZu-X0-Bjp"/>
                     <constraint firstItem="8Jt-Fm-EHc" firstAttribute="centerY" secondItem="TDA-4s-hIS" secondAttribute="centerY" id="Ne3-c3-dvn"/>
-                    <constraint firstItem="un8-BG-ixL" firstAttribute="leading" secondItem="jqt-4G-bnW" secondAttribute="leading" id="PAh-UX-dCT"/>
                     <constraint firstItem="wSG-j3-8Pa" firstAttribute="leading" secondItem="jza-Nx-yLj" secondAttribute="leading" id="Vuo-QQ-Fep"/>
-                    <constraint firstItem="un8-BG-ixL" firstAttribute="top" secondItem="jqt-4G-bnW" secondAttribute="bottom" constant="4" id="WnY-Ix-qob"/>
                     <constraint firstItem="xKU-O4-RNH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eTt-gy-46R"/>
                     <constraint firstItem="wSG-j3-8Pa" firstAttribute="trailing" secondItem="8Jt-Fm-EHc" secondAttribute="trailing" id="k68-bw-S0w"/>
                     <constraint firstItem="jza-Nx-yLj" firstAttribute="leading" secondItem="fgS-sz-f48" secondAttribute="leading" id="mVr-0z-T3N"/>
                     <constraint firstItem="fgS-sz-f48" firstAttribute="top" secondItem="TDA-4s-hIS" secondAttribute="bottom" constant="10" id="oG5-dt-b0K"/>
                     <constraint firstItem="xKU-O4-RNH" firstAttribute="trailing" secondItem="8Jt-Fm-EHc" secondAttribute="trailing" constant="16" id="sex-Jv-Xpg"/>
+                    <constraint firstItem="un8-BG-ixL" firstAttribute="leading" secondItem="i0x-GG-7aB" secondAttribute="leading" id="xda-vc-EGc"/>
                     <constraint firstItem="jza-Nx-yLj" firstAttribute="top" secondItem="fgS-sz-f48" secondAttribute="bottom" constant="6" id="ymP-g9-i1m"/>
                 </constraints>
             </tableViewCellContentView>
@@ -102,11 +113,12 @@
                 <outlet property="backgroundImage" destination="xKU-O4-RNH" id="8tB-M7-vro"/>
                 <outlet property="contactButton" destination="wSG-j3-8Pa" id="FJ6-wh-TKw"/>
                 <outlet property="favouriteStateButton" destination="8Jt-Fm-EHc" id="8wZ-KO-Hun"/>
+                <outlet property="popularImage" destination="i0x-GG-7aB" id="4qO-Ck-x4S"/>
                 <outlet property="serviceCommentLabel" destination="jza-Nx-yLj" id="YRd-qN-9J7"/>
                 <outlet property="serviceLabel" destination="un8-BG-ixL" id="8Fz-Ts-QWf"/>
                 <outlet property="servicePriceLabel" destination="fgS-sz-f48" id="3KI-vj-mX3"/>
                 <outlet property="userImage" destination="TDA-4s-hIS" id="UJh-tp-ip4"/>
-                <outlet property="userNameLabel" destination="jqt-4G-bnW" id="vrr-QB-9hH"/>
+                <outlet property="userNameLabel" destination="Xz3-AX-xFP" id="etM-m6-x93"/>
             </connections>
             <point key="canvasLocation" x="76.153846153846146" y="82.464454976303315"/>
         </tableViewCell>

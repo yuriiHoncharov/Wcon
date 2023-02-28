@@ -16,6 +16,8 @@ class STableViewCell: UITableViewCell {
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var favouriteStateButton: UIButton!
+    @IBOutlet weak var popularImage: UIImageView!
+    
     var favouriteButton: (() -> Void)?
     var contactButtonHandler: (() -> Void)?
     
@@ -36,6 +38,10 @@ class STableViewCell: UITableViewCell {
     }
     
     func setService(service: ServiceSearchEntity.View.SearchItemEntity) {
+        // MARK: popularImage
+        if service.isPopular {
+            popularImage.image = UIImage(named: Image.popular)
+        }
         // MARK: background
         backgroundImage.cornerRadius = 10
         backgroundImage.backgroundColor = UIColor(named: Color.baseWhite)

@@ -25,5 +25,13 @@ struct Constants {
         static let inviteToWork = "Пригласить на работу"
         static let specialists = "Специалисты:"
         static let listOfService = "Список заказов"
+        static let search = "Search"
+    }
+    
+    struct TabBar {
+        static let home = "Home"
+        static let orders = "Orders"
+        static let chats = "Chats"
+        static let profile = "Profile"
     }
 }

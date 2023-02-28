@@ -16,12 +16,14 @@ class ServiceSearchViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var serviceCountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var searchTextField: UITextField!
     // MARK: - Properties
     static let builder = ServiceSearchBuilder()
     private var interactor: ServiceSearchInteractorProtocol!
     private var router: ServiceSearchRouterProtocol!
     private var services: [ServiceSearchEntity.View.SearchItemEntity] = []
+    private var isFilterService = false
+    private var filterService: [ServiceSearchEntity.View.SearchItemEntity] = []
     private var totalCount: Int = 0
     
     // MARK: - Setup
@@ -30,61 +32,91 @@ class ServiceSearchViewController: UIViewController {
         self.interactor = interactor
         self.router = router
     }
-    
     // MARK: View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Constants.Search.listOfService
-        
         interactor.getData()
         setupTableView()
         setNavigationBar()
         setTopView()
-        tableView.separatorStyle = .none
     }
     
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(STableViewCell.self)
+        tableView.separatorStyle = .none
     }
     
     private func setNavigationBar() {
+        title = Constants.Search.listOfService
         self.makeTransparentNavigationBar()
         
     }
     
     private func setTopView() {
-        serviceCountLabel.text = "\(Constants.Search.specialists) \(totalCount)"
+        searchTextField.delegate = self
+        searchTextFieldPlaceholder()
+        serviceCountLabel.text = "\(Constants.Search.specialists) \(filterService.count)"
         serviceCountLabel.font = .systemFont(ofSize: 10, weight: .medium)
-//        serviceCountLabel.reloadData()
+        view.backgroundColor = UIColor(named: Color.lightGray)
     }
     
-    @IBAction func searchTextField(_ sender: UITextField) {
-//        if searchTextField.text.isEmpty == false {
-
-        //        }
+    private func searchTextFieldPlaceholder() {
+        searchTextField.textAlignment = .center
+        let attachment = NSTextAttachment()
+        attachment.image = UIImage(named: Image.search)
+        attachment.bounds = CGRect(x: 0, y: -3, width: 16, height: 16)
+        let attachmentStr = NSAttributedString(attachment: attachment)
+        let myString = NSMutableAttributedString(string: "")
+        myString.append(attachmentStr)
+        let myString1 = NSMutableAttributedString(string: " \(Constants.Search.search)")
+        myString.append(myString1)
+        searchTextField.attributedPlaceholder = myString
     }
 }
 
-//extension ServiceSearchViewController: UITextFieldDelegate {
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        <#code#>
-//    }
-//}
+extension ServiceSearchViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let text = textField.text {
+            filterText(text + string)
+        }
+        return true
+    }
+    
+    func filterText(_ query: String) {
+        filterService.removeAll()
+        for service in services {
+            if service.category.lowercased().starts(with: query.lowercased()) {
+                filterService.append(service)
+            }
+        }
+        tableView.reloadData()
+        isFilterService = true
+//        print("\(query)")
+    }
+}
 
 extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return services.count
+        if !filterService.isEmpty {
+            return filterService.count
+        }
+        return  isFilterService ? 0 : services.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let service = services[indexPath.row]
         let cell = tableView.dequeue(STableViewCell.self, indexPath)
-        
-        cell.setService(service: service)
+        if filterService.isEmpty == true {
+            let service = services[indexPath.row]
+            cell.setService(service: service)
+        } else {
+            let service = filterService[indexPath.row]
+            cell.setService(service: service)
+        }
         cell.backgroundColor = UIColor(named: Color.backgroundGray)
         cell.favouriteButton = { [weak self] in
             guard let self else { return }
@@ -93,11 +125,9 @@ extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegat
         return cell
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        return headerView
-    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0
+        }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
