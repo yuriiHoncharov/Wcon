@@ -14,6 +14,7 @@ protocol ServiceSearchViewControllerProtocol: AnyObject {
 
 class ServiceSearchViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet weak var serviceCountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
@@ -21,6 +22,7 @@ class ServiceSearchViewController: UIViewController {
     private var interactor: ServiceSearchInteractorProtocol!
     private var router: ServiceSearchRouterProtocol!
     private var services: [ServiceSearchEntity.View.SearchItemEntity] = []
+    private var totalCount: Int = 0
     
     // MARK: - Setup
     
@@ -33,9 +35,12 @@ class ServiceSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        title = Constants.Search.listOfService
+        
         interactor.getData()
+        setupTableView()
         setNavigationBar()
+        setTopView()
         tableView.separatorStyle = .none
     }
     
@@ -47,8 +52,27 @@ class ServiceSearchViewController: UIViewController {
     
     private func setNavigationBar() {
         self.makeTransparentNavigationBar()
+        
+    }
+    
+    private func setTopView() {
+        serviceCountLabel.text = "\(Constants.Search.specialists) \(totalCount)"
+        serviceCountLabel.font = .systemFont(ofSize: 10, weight: .medium)
+//        serviceCountLabel.reloadData()
+    }
+    
+    @IBAction func searchTextField(_ sender: UITextField) {
+//        if searchTextField.text.isEmpty == false {
+
+        //        }
     }
 }
+
+//extension ServiceSearchViewController: UITextFieldDelegate {
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        <#code#>
+//    }
+//}
 
 extension ServiceSearchViewController: UITableViewDataSource, UITableViewDelegate {
     

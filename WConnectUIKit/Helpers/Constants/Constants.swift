@@ -23,5 +23,7 @@ struct Constants {
     
     struct Search {
         static let inviteToWork = "Пригласить на работу"
+        static let specialists = "Специалисты:"
+        static let listOfService = "Список заказов"
     }
 }

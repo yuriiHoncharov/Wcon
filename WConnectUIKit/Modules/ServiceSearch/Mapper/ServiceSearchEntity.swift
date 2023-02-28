@@ -21,7 +21,6 @@ struct ImageObject: Hashable {
 
 struct SearchEntity: Identifiable, Hashable {
     let id: String
-    let number: Int?
     let category: String
     let categories: [String]
     let subcategory: String
@@ -34,12 +33,9 @@ struct SearchEntity: Identifiable, Hashable {
     let address: String
     let gender: Gender
     let birthday: String
-    let ageFrom: Int
-    let ageTo: Int
     let comment: String
     let priceFrom: Int
     let priceTo: Int
-    let lastMessage: String?
     let avatar: String
     let receiver: String
     let isOnline: Bool
@@ -52,7 +48,6 @@ struct SearchEntity: Identifiable, Hashable {
 
 extension SearchEntity {
     static let mock = SearchEntity(id: "id" ,
-                                   number: 0,
                                    category: "category",
                                    categories: [],
                                    subcategory: "subcategory",
@@ -65,12 +60,9 @@ extension SearchEntity {
                                    address: "",
                                    gender: .male,
                                    birthday: "",
-                                   ageFrom: 1,
-                                   ageTo: 2,
                                    comment: "comment",
                                    priceFrom: 1,
                                    priceTo: 2,
-                                   lastMessage: nil,
                                    avatar: "",
                                    receiver: "",
                                    isOnline: true,

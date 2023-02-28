@@ -24,7 +24,6 @@ struct SearchEntityMapper {
         let promotionTypes: [TypePromotion] = entity.specialist.buyPromotion.map({ $0.type })
         
         return SearchEntity(id: entity.id,
-                            number: nil,
                             category: entity.category?.titleTranslations?.localized() ?? "",
                             categories: categories,
                             subcategory: entity.subcategory?.titleTranslations?.localized() ?? "",
@@ -37,12 +36,9 @@ struct SearchEntityMapper {
                             address: entity.address,
                             gender: Gender(rawValue: entity.specialist.gender) ?? .unknown,
                             birthday: entity.specialist.birthday ?? "",
-                            ageFrom: 1,
-                            ageTo: 2,
                             comment: entity.comment,
                             priceFrom: entity.priceFrom,
                             priceTo: entity.priceTo,
-                            lastMessage: nil,
                             avatar: entity.specialist.avatar ?? "",
                             receiver: entity.specialist.id,
                             isOnline: entity.specialist.isOnline,

@@ -63,6 +63,8 @@
 		1FCCB07929A77E7E003295CE /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB07729A77E7E003295CE /* HomeTableViewCell.swift */; };
 		1FCCB07A29A77E7E003295CE /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCCB07829A77E7E003295CE /* HomeTableViewCell.xib */; };
 		1FCCB07C29A78517003295CE /* Extension+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCB07B29A78517003295CE /* Extension+UITableView.swift */; };
+		1FD21FA429ACE8EB00486C6A /* ServiceSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD21FA229ACE8EB00486C6A /* ServiceSearchTableViewCell.swift */; };
+		1FD21FA529ACE8EB00486C6A /* ServiceSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD21FA329ACE8EB00486C6A /* ServiceSearchTableViewCell.xib */; };
 		1FF192EC29A8BF0A00F68700 /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF192EA29A8BF0A00F68700 /* HorizontalTableViewCell.swift */; };
 		1FF192ED29A8BF0A00F68700 /* HorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF192EB29A8BF0A00F68700 /* HorizontalTableViewCell.xib */; };
 		1FF192F329A8C0D800F68700 /* HorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF192F129A8C0D800F68700 /* HorizontalCollectionViewCell.swift */; };
@@ -129,6 +131,8 @@
 		1FCCB07729A77E7E003295CE /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1FCCB07829A77E7E003295CE /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		1FCCB07B29A78517003295CE /* Extension+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Extension+UITableView.swift"; path = "../../../../../dogiz_2.0_ios/Dogiz/Helpers/Extensions/Extension+UITableView.swift"; sourceTree = "<group>"; };
+		1FD21FA229ACE8EB00486C6A /* ServiceSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSearchTableViewCell.swift; sourceTree = "<group>"; };
+		1FD21FA329ACE8EB00486C6A /* ServiceSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceSearchTableViewCell.xib; sourceTree = "<group>"; };
 		1FF192EA29A8BF0A00F68700 /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
 		1FF192EB29A8BF0A00F68700 /* HorizontalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalTableViewCell.xib; sourceTree = "<group>"; };
 		1FF192F129A8C0D800F68700 /* HorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -357,6 +361,8 @@
 			children = (
 				1F6596C529A6046000BE4941 /* STableViewCell.swift */,
 				1F6596C629A6046000BE4941 /* STableViewCell.xib */,
+				1FD21FA229ACE8EB00486C6A /* ServiceSearchTableViewCell.swift */,
+				1FD21FA329ACE8EB00486C6A /* ServiceSearchTableViewCell.xib */,
 			);
 			path = ServiceTableViewCell;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD21FA529ACE8EB00486C6A /* ServiceSearchTableViewCell.xib in Resources */,
 				1FF192F429A8C0D800F68700 /* HorizontalCollectionViewCell.xib in Resources */,
 				1FCCB04C29A76815003295CE /* ServiceSearchViewController.storyboard in Resources */,
 				1F6596C829A6046000BE4941 /* STableViewCell.xib in Resources */,
@@ -524,6 +531,7 @@
 				1F2E544D299FC10C0084B6C6 /* Extension+UIView.swift in Sources */,
 				1FCCB04E29A76815003295CE /* ServiceSearchViewController.swift in Sources */,
 				1FCCB07329A77A62003295CE /* HomeViewController.swift in Sources */,
+				1FD21FA429ACE8EB00486C6A /* ServiceSearchTableViewCell.swift in Sources */,
 				1F3A07DB29A38BBE007EA30C /* ServiceSearchEntity.swift in Sources */,
 				1F591CD729A674580044B816 /* Keychain.swift in Sources */,
 				1F7099A3299E6D6700431F3D /* GetServiceApiEntity.swift in Sources */,

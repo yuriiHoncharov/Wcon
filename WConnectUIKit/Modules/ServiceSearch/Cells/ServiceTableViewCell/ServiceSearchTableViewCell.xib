@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ServiceSearchTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceSearchTableViewCell" rowHeight="165" id="KGk-i7-Jjw" customClass="ServiceSearchTableViewCell" customModule="WConnectUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ota-gT-Fjq">
+                        <rect key="frame" x="16" y="50" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVb-F2-fxy">
+                        <rect key="frame" x="16" y="0.0" width="279" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="searchTextField:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="e4n-B5-3nx"/>
+                        </connections>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS3-76-L4X">
+                        <rect key="frame" x="311" y="9" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="GdR-tk-eq4"/>
+                            <constraint firstAttribute="height" constant="16" id="ZYH-nJ-FzN"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="Sliders"/>
+                        <connections>
+                            <action selector="filterNavigation:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GgO-fb-RBU"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AS3-76-L4X" firstAttribute="leading" secondItem="fVb-F2-fxy" secondAttribute="trailing" constant="16" id="6Lc-Oc-Sw7"/>
+                    <constraint firstItem="ota-gT-Fjq" firstAttribute="leading" secondItem="fVb-F2-fxy" secondAttribute="leading" id="LF4-Qa-dsU"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ota-gT-Fjq" secondAttribute="bottom" constant="16" id="VaA-1q-Dcx"/>
+                    <constraint firstItem="fVb-F2-fxy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cHB-xi-ely"/>
+                    <constraint firstAttribute="trailing" secondItem="AS3-76-L4X" secondAttribute="trailing" constant="16" id="dVO-Sg-YaO"/>
+                    <constraint firstItem="ota-gT-Fjq" firstAttribute="top" secondItem="fVb-F2-fxy" secondAttribute="bottom" constant="16" id="lIC-Yr-vpB"/>
+                    <constraint firstItem="AS3-76-L4X" firstAttribute="centerY" secondItem="fVb-F2-fxy" secondAttribute="centerY" id="otV-Qi-v4S"/>
+                    <constraint firstItem="fVb-F2-fxy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wO6-Ii-WQG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLabel" destination="ota-gT-Fjq" id="xtv-QH-3gR"/>
+                <outlet property="styleTextField" destination="fVb-F2-fxy" id="sZx-yk-eOf"/>
+            </connections>
+            <point key="canvasLocation" x="10" y="63.625592417061611"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Sliders" width="16" height="16"/>
+    </resources>
+</document>
