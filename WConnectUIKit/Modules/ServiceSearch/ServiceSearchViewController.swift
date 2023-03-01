@@ -95,7 +95,6 @@ extension ServiceSearchViewController: UITextFieldDelegate {
         }
         tableView.reloadData()
         isFilterService = true
-//        print("\(query)")
     }
 }
 

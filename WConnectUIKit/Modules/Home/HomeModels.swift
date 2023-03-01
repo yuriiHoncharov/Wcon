@@ -8,13 +8,38 @@
 import Foundation
 
 enum HomeEntity {
-    struct Request {
-        
+    struct Request: Codable {
+        let page: Int?
+        let limit: Int
     }
-    struct Response {
-        
+    
+    struct Response: BaseResponseProtocol {
+        var error: String?
+        let items: [Category]?
+        let totalCount: Int?
     }
+    
+    struct Category: Codable {
+        let id: String?
+        let remark: String?
+        let titleTranslations: LocalizedApiTitle?
+        let title: String?
+        let icon: String?
+        
+        enum CodingKeys: String, CodingKey {
+            case id = "_id"
+            case remark
+            case titleTranslations
+            case title
+            case icon
+        }
+    }
+    
     struct View {
-        
+        struct CategoryEntity {
+            var id: String
+            var title: String
+            var icon: String
+        }
     }
 }

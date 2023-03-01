@@ -19,7 +19,7 @@ class ServiceSearchPresenter: ServiceSearchPresenterProtocol {
     }
     
     func configure(_ entities: [SearchEntity], dateUtility: DateFormatterUtility) {
-        var viewEntites: [ServiceSearchEntity.View.SearchItemEntity] = []
+        var viewEntities: [ServiceSearchEntity.View.SearchItemEntity] = []
         for entity in entities {
             
             let viewEntity = ServiceSearchEntity.View.SearchItemEntity(id: entity.id,
@@ -42,9 +42,9 @@ class ServiceSearchPresenter: ServiceSearchPresenterProtocol {
 //                                                                         isFavorite: entity.specialist.isFavorite ?? false,
 //                                                                         avatar: entity.specialist.avatar ?? "",
 //                                                                         comment: entity.comment)
-            viewEntites.append(viewEntity)
+            viewEntities.append(viewEntity)
         }
         
-        view.configure(viewEntites)
+        view.configure(viewEntities)
     }
 }

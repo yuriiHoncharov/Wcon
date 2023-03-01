@@ -8,6 +8,7 @@
 import Foundation
 
 protocol HomePresenterProtocol {
+    func configure(_ entities: [HomeEntity.View.CategoryEntity])
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -15,5 +16,16 @@ class HomePresenter: HomePresenterProtocol {
     
     required init(view: HomeViewControllerProtocol) {
         self.view = view
+    }
+    
+    func configure(_ entities: [HomeEntity.View.CategoryEntity]) {
+        var viewEntities: [HomeEntity.View.CategoryEntity] = []
+        for entity in entities {
+            let viewEntity = HomeEntity.View.CategoryEntity(id: entity.id,
+                                            title: entity.title,
+                                            icon: entity.icon)
+            viewEntities.append(viewEntity)
+        }
+        view.configure(viewEntities)
     }
 }

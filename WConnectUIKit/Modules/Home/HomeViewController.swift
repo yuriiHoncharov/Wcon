@@ -9,7 +9,8 @@
 import UIKit
 
 protocol HomeViewControllerProtocol: AnyObject {
-    func navigateTo()
+//    func navigateTo()
+    func configure(_ entities: [HomeEntity.View.CategoryEntity])
 }
 
 private enum HomeCells: Int, CaseIterable {
@@ -17,7 +18,7 @@ private enum HomeCells: Int, CaseIterable {
     case title
     case horizontalScrollWithImage
     case subtitle
-//    case horizontalScrollWithCategory
+    case horizontalScrollWithCategory
 //    case blogs
     
     static func defaultSectionCount() -> Int {
@@ -33,6 +34,7 @@ class HomeViewController: UIViewController {
     static let builder = HomeBuilder()
     private var interactor: HomeInteractorProtocol!
     private var router: HomeRouterProtocol!
+    private var categoryEntity: [HomeEntity.View.CategoryEntity] = []
     
     // MARK: - Setup
     
@@ -44,6 +46,7 @@ class HomeViewController: UIViewController {
     // MARK: View lifecycle
     
     override func viewDidLoad() {
+        interactor.getData()
         super.viewDidLoad()
         setupCollectionView()
     }
@@ -55,12 +58,13 @@ class HomeViewController: UIViewController {
         tableView.backgroundColor = UIColor(named: Color.backgroundGray)
         tableView.register(HomeTableViewCell.self)
         tableView.register(HorizontalTableViewCell.self)
+        tableView.register(HomeCategoryTableViewCell.self)
     }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -77,7 +81,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             let cell = tableView.dequeue(HorizontalTableViewCell.self, indexPath)
             return cell
-        } else {
+        } else if indexPath.row == 2 {
             let cell = tableView.dequeue(HomeTableViewCell.self, indexPath)
             cell.display(title: Constants.Home.category, subtitle: "", buttonTitle: Constants.Home.allOrders)
             cell.buttonAction = { [weak self] in
@@ -88,15 +92,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             return cell
+        } else {
+            let cell = tableView.dequeue(HomeCategoryTableViewCell.self, indexPath)            
+            return cell
         }
     }
 }
 
 extension HomeViewController: HomeViewControllerProtocol {
-    func navigateTo() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.router.navigateTo()
+//    func navigateTo() {
+//        DispatchQueue.main.async { [weak self] in
+//            guard let self = self else { return }
+//            self.router.navigateTo()
+//        }
+//    }
+    
+    func configure(_ entities: [HomeEntity.View.CategoryEntity]) {
+        self.categoryEntity = entities
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
 }

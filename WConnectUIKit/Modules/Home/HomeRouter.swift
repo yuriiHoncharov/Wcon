@@ -8,8 +8,8 @@
 import UIKit
 
 protocol HomeRouterProtocol: AnyObject {
-   func navigationToServiceSearch()
-   func navigateTo()
+//   func navigationToServiceSearch()
+//   func navigateTo()
 }
 
 class HomeRouter: HomeRouterProtocol {
@@ -21,25 +21,25 @@ class HomeRouter: HomeRouterProtocol {
         self.dataStore = interactor
     }
     
-    func navigateTo() {
-        var navigationVC: UINavigationController
-        var vc: UIViewController
-        vc = ServiceSearchViewController()
-
-        navigationVC = UINavigationController(rootViewController: vc)
-        navigationVC.navigationBar.isHidden = true
-        navigationVC.modalPresentationStyle = .fullScreen
-        
-        DispatchQueue.main.async {
-            self.view.present(navigationVC, animated: true, completion: nil)
-        }
-    }
+//    func navigateTo() {
+//        var navigationVC: UINavigationController
+//        var vc: UIViewController
+//        vc = ServiceSearchViewController()
+//
+//        navigationVC = UINavigationController(rootViewController: vc)
+//        navigationVC.navigationBar.isHidden = true
+//        navigationVC.modalPresentationStyle = .fullScreen
+//
+//        DispatchQueue.main.async {
+//            self.view.present(navigationVC, animated: true, completion: nil)
+//        }
+//    }
     
-    func navigationToServiceSearch() {
-        DispatchQueue.main.async { [weak self] in
-            guard let `self` = self else { return }
-            let vc = ServiceSearchViewController.builder.default()
-            self.view.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
+//    func navigationToServiceSearch() {
+//        DispatchQueue.main.async { [weak self] in
+//            guard let `self` = self else { return }
+//            let vc = ServiceSearchViewController.builder.default()
+//            self.view.navigationController?.pushViewController(vc, animated: true)
+//        }
+//    }
 }
